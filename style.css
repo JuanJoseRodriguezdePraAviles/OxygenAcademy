@@ -1,6 +1,11 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  min-width: 320px;
 }
 
 .header {
@@ -15,7 +20,7 @@ body {
 }
 
 .header h1 {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-weight: 300;
   color: #08A6E4;
   line-height: 37px;
@@ -30,8 +35,56 @@ body {
   margin-left: 7rem;
   padding-top: 1rem;
   margin-bottom: 0;
-  width: 20px;
-  height: 12px;
+  width: 1.5rem;
+  height: 2rem;
+}
+
+.main {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.sellMore {
+  width: 310px;
+  height: 213px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.sellMore h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sellMore p {
+  font-family: "Open Sans";
+  font-weight: 400;
+  size: 2rem;
+  height: 57px;
+  margin: 1rem 2rem;
+}
+
+.btn {
+  background-color: #08A6E4;
+  width: 310px;
+  height: 57px;
+  border-radius: 75px;
+  display: inline-block;
+  text-align: center;
+  line-height: 3.5rem;
+}
+
+.btn:hover {
+  background-color: #07688f;
+}
+
+.btn a {
+  color: white;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
