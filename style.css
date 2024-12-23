@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: relative;
+  clear: left;
+  box-shadow: 0 0.1px 5px 0px gray;
+}
+
+.header h1, .menuIcon {
+  display: inline-block;
+  margin: 1rem 1rem;
+}
+
+.header h1 {
+  font-family: "Raleway";
+  font-weight: 300;
+  color: #08A6E4;
+  line-height: 37px;
+  font-size: 37px;
+  width: 206px;
+  height: 37px;
+  text-align: left;
+}
+
+.menuIcon {
+  text-align: right;
+  margin-left: 7rem;
+  padding-top: 1rem;
+  margin-bottom: 0;
+  width: 20px;
+  height: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */
