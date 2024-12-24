@@ -1,0 +1,63 @@
+.benefits {
+    width: 10rem;
+    text-align: center;
+    display:inline-block;
+    width: 90%;
+}
+
+.benefitBox {
+    background-color: white;
+    margin: 1rem;
+}
+
+.benefitBox h3 {
+    font-family: "Raleway";
+    font-weight: 400px;
+    font-size: 1.8rem;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.benefitBox p {
+    font-family: "Raleway";
+    font-weight: 400px;
+    font-size: 0.6rem;
+    text-align: left;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.macbook {
+    position: relative;
+    rotate: -45deg;
+    left: -37px;
+    top: 30px;
+    width: 7rem;
+}
+
+.circleSquare {
+    display: inline-block;
+    position:relative;
+    top: -10px;
+    left: 30px;
+
+    rotate: 45deg;
+    border-radius: 40%;
+    width: 3rem;
+    height:3rem;
+    margin: 2rem;
+}
+
+.iPhone {
+    width: 7rem;
+}
+
+.circleBig {
+    display: inline-block;
+    border-radius: 100%;
+    width: 5.5rem;
+    height:5rem;
+    margin: 1rem;
+}
+
