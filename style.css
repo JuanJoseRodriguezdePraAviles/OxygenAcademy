@@ -12,11 +12,12 @@ body {
   position: relative;
   clear: left;
   box-shadow: 0 0.1px 5px 0px gray;
+  height: 5rem;
 }
 
 .header h1, .menuIcon {
   display: inline-block;
-  margin: 1rem 1rem;
+  margin: 1rem 0;
 }
 
 .header h1 {
@@ -31,7 +32,6 @@ body {
 }
 
 .menuIcon {
-  text-align: right;
   margin-left: 7rem;
   padding-top: 1rem;
   margin-bottom: 0;
