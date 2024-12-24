@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+.header {
+  position: relative;
+  clear: left;
+  box-shadow: 0 0.1px 5px 0px gray;
+}
+
+.header h1, .menuIcon {
+  display: inline-block;
+  margin: 1rem 1rem;
+}
+
+.header h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: #08A6E4;
+  line-height: 37px;
+  font-size: 37px;
+  width: 206px;
+  height: 37px;
+  text-align: left;
+}
+
+.menuIcon {
+  text-align: right;
+  margin-left: 7rem;
+  padding-top: 1rem;
+  margin-bottom: 0;
+  width: 1.5rem;
+  height: 2rem;
+}
+
+.main {
+  text-align: center;
+  margin-top: 5rem;
+  background-color: #F7F7F7;
+}
+
+.sellMore {
+  width: 310px;
+  height: 213px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+}
+
+.sellMore h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sellMore p {
+  font-family: "Open Sans";
+  font-weight: 400;
+  size: 2rem;
+  height: 57px;
+  margin: 1rem 2rem;
+}
+
+.btn {
+  background-color: #08A6E4;
+  width: 310px;
+  height: 57px;
+  border-radius: 75px;
+  display: inline-block;
+  text-align: center;
+  line-height: 3.5rem;
+}
+
+.btn:hover {
+  background-color: #07688f;
+}
+
+.btn a {
+  color: white;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.laptopImage {
+  background-image: url("./images/Background.png");
+  height: 300px;
+  width: 779px;
+  position: relative;
+  left: -165px;
+}
+
+bg-white {
+  background-color: white;
+}
+
+.mostPopular h3 {
+  font-family: "Raleway";
+  font-weight: 300px;
+  font-size: 2.5rem;
+}
+
+.cardData {
+  text-align: center;
+  margin: 2rem;
+}
+
+.cardData h4 {
+  font-family: "Raleway";
+  font-weight: bolder;
+  letter-spacing: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.cardData p {
+  font-family: "Raleway";
+  color: #A5A5A5;
+}
+
+.circle {
+  display: inline-block;
+  text-align: center;
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem;
+}
+
+.red img, .green img {
+  height: 2.5rem;
+  width: 2.3rem;
+  position: relative;
+  left: 1rem;
+  top: 0.2rem;
+}
+
+.blue img {
+  height: 1.5rem;
+  width: 3rem;
+  position: relative;
+  left: 1rem;
+  top: 0.65rem;
+}
+
+.red {
+  background-color: #FB3B64;
+}
+
+.blue {
+  background-color: #08A6E4;
+}
+
+.green {
+  background-color: #55DFB4;
+}
+
+/*# sourceMappingURL=style.css.map */
