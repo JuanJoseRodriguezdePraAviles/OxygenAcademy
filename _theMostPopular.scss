@@ -33,14 +33,13 @@ bg-white {
 
 .circle {
     display: inline-block;
-    text-align: center;
     border-radius: 100%;
     width: 3rem;
     height:3rem;
     margin: 1rem;
 }
 
-.red img, .green img {
+.icon {
     height: 2.5rem;
     width: 2.3rem;
     position: relative;
@@ -48,7 +47,7 @@ bg-white {
     top: 0.2rem;
 }
 
-.blue img {
+.iconLong {
     height: 1.5rem;
     width: 3rem;
     position: relative;
