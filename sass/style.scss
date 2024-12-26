@@ -1,0 +1,21 @@
+@use 'header';
+@use 'main';
+@use 'sellMore';
+@use 'laptopImage';
+@use 'theMostPopular';
+@use 'benefits';
+@use 'pricing';
+
+@use 'priceBox';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-width: 320px;
+}
+
+
+

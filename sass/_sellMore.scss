@@ -22,9 +22,7 @@
 }
 
 .btn {
-    background-color: #08A6E4;
-    width: 310px;
-    height: 57px;
+    
     border-radius: 75px;
     display: inline-block;
     text-align: center;
@@ -33,7 +31,12 @@
 
 }
 
-.btn:hover {
+.btnBig {
+    width: 310px;
+    height: 57px;
+}
+
+.btnBig:hover {
     background-color: #07688f;
 }
 
@@ -45,4 +48,5 @@
 
     
 }
+
  
