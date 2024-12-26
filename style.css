@@ -167,7 +167,7 @@ bg-white {
   width: 90%;
 }
 
-.benefitBox {
+.benefitBox, .benefitBoxExtended {
   background-color: white;
   margin: 1rem;
 }
@@ -220,6 +220,31 @@ bg-white {
   width: 5.5rem;
   height: 5rem;
   margin: 1rem;
+}
+
+.green img {
+  position: relative;
+  left: -20px;
+  top: 20px;
+}
+
+.benefitBoxExtended h3 {
+  font-family: "Raleway";
+  font-weight: 400px;
+  font-size: 1.8rem;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.benefitBoxExtended p {
+  font-family: "Raleway";
+  font-weight: 400px;
+  font-size: 0.8rem;
+  text-align: left;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: 150%;
 }
 
 /*# sourceMappingURL=style.css.map */
