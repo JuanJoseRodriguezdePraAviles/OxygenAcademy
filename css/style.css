@@ -198,6 +198,38 @@ bg-white {
   background-color: #55DFB4;
 }
 
+@media screen and (min-width: 1200px) {
+  .mostPopular {
+    background-color: white;
+    width: 100%;
+    padding-bottom: 5rem;
+  }
+  .dataBox {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .circle {
+    display: inline-block;
+    border-radius: 100%;
+    width: 6rem;
+    height: 6rem;
+    margin: 1rem;
+  }
+  .icon {
+    height: 5rem;
+    width: 4.6rem;
+    position: relative;
+    left: 2rem;
+    top: 0.2rem;
+  }
+  .iconLong {
+    height: 3rem;
+    width: 6rem;
+    position: relative;
+    left: 2rem;
+    top: 1.3rem;
+  }
+}
 .benefits {
   width: 10rem;
   text-align: center;
@@ -260,7 +292,7 @@ bg-white {
   margin: 1rem;
 }
 
-.green img {
+.trumpet {
   position: relative;
   left: -20px;
   top: 20px;
