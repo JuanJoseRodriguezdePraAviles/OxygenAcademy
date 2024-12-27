@@ -29,6 +29,37 @@
   height: 2rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header h1 {
+    margin-left: 7rem;
+  }
+  .menuExtended {
+    margin-right: 3rem;
+  }
+  .menuIcon {
+    visibility: hidden;
+  }
+  .menuExtended {
+    display: flex;
+    justify-content: space-around;
+    width: 35rem;
+  }
+  .menuLink {
+    display: flex;
+    border-bottom: 5px solid #08A6E4;
+    align-items: center;
+  }
+  .menuLink p {
+    font-family: "Open Sans";
+    font-size: 0.75rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
 .main {
   text-align: center;
   margin-top: 5rem;
