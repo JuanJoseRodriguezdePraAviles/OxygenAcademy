@@ -9,3 +9,14 @@
 
     
 }
+
+@media  screen and (min-width: 1200px){
+    .laptopImage {
+        background-repeat: no-repeat;
+        transform: scale(1.1);
+        width: 100%;
+        background-position: calc(100% + 3rem);
+        min-height: 35rem; 
+        margin-bottom: 3rem;
+    }
+}
