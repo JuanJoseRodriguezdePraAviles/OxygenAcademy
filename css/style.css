@@ -458,6 +458,40 @@ input[type=submit] {
   margin-left: 7rem;
 }
 
+.footer {
+  box-shadow: 0 0.1px 40px 0px rgb(184, 184, 184);
+  padding: 2rem 2rem;
+}
+
+.ownership, .socials {
+  display: inline-block;
+}
+
+.ownership h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: #08A6E4;
+  line-height: 37px;
+  font-size: 37px;
+  width: 206px;
+  height: 37px;
+  text-align: left;
+}
+
+.copyright {
+  font-family: "Open Sans";
+  color: #A5A5A5;
+}
+
+.socials {
+  position: relative;
+  top: -1rem;
+}
+
+.socials img {
+  margin-left: 1rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
