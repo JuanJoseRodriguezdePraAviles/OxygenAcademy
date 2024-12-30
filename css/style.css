@@ -806,6 +806,17 @@ input[type=submit] {
   margin-left: 1rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+  }
+  .socials {
+    margin-top: 3rem;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
