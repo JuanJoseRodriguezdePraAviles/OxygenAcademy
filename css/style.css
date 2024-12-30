@@ -89,8 +89,11 @@
   margin: 1rem 2rem;
 }
 
-.btn {
+.btnSellMore {
+  background-color: #08A6E4;
   border-radius: 75px;
+  color: white;
+  font-family: "Open Sans";
   display: inline-block;
   text-align: center;
   line-height: 3.5rem;
@@ -102,7 +105,7 @@
 }
 
 .btnBig:hover {
-  background-color: #07688f;
+  background-color: #08A6E4;
 }
 
 .btn a {
@@ -115,6 +118,9 @@
 @media screen and (min-width: 1200px) {
   .sellMore {
     width: 100%;
+  }
+  .greenBtn:hover {
+    background-color: #215544;
   }
 }
 .laptopImage {
@@ -170,6 +176,15 @@ bg-white {
   margin: 1rem;
 }
 
+.smallBlueCircle {
+  width: 3rem;
+  height: 3rem;
+  background-color: #08A6E4;
+  display: inline-block;
+  border-radius: 100%;
+  margin: 1rem;
+}
+
 .icon {
   height: 2.5rem;
   width: 2.3rem;
@@ -186,15 +201,15 @@ bg-white {
   top: 0.65rem;
 }
 
-.red {
+.bg-red {
   background-color: #FB3B64;
 }
 
-.blue {
+.bg-blue {
   background-color: #08A6E4;
 }
 
-.green {
+.bg-green {
   background-color: #55DFB4;
 }
 
@@ -209,6 +224,13 @@ bg-white {
     justify-content: space-evenly;
   }
   .circle {
+    display: inline-block;
+    border-radius: 100%;
+    width: 6rem;
+    height: 6rem;
+    margin: 1rem;
+  }
+  .smallBlueCircle {
     display: inline-block;
     border-radius: 100%;
     width: 6rem;
@@ -292,6 +314,18 @@ bg-white {
   margin: 1rem;
 }
 
+.circleBigBlue {
+  display: inline-block;
+  border-radius: 100%;
+  width: 5.5rem;
+  height: 5rem;
+  margin: 1rem;
+  background-color: #08A6E4;
+  display: inline-block;
+  border-radius: 100%;
+  margin: 1rem;
+}
+
 .trumpet {
   position: relative;
   left: -20px;
@@ -350,6 +384,15 @@ bg-white {
     width: 24rem;
     height: 24rem;
   }
+  .circleBigBlue {
+    margin-left: 4rem;
+    width: 24rem;
+    height: 24rem;
+    background-color: #08A6E4;
+    display: inline-block;
+    border-radius: 100%;
+    margin: 1rem;
+  }
   .macbook {
     width: 26rem;
     left: -160px;
@@ -377,24 +420,7 @@ bg-white {
     font-family: "Open Sans";
     text-align: left;
   }
-  .redLine {
-    background-color: #FB3B64;
-    height: 10px;
-    width: 30rem;
-    margin-top: 3rem;
-    margin-left: 1rem;
-    border-radius: 20%;
-  }
-  .blueLine {
-    background-color: #08A6E4;
-    height: 10px;
-    width: 30rem;
-    margin-top: 3rem;
-    margin-left: 1rem;
-    border-radius: 20%;
-  }
-  .greenLine {
-    background-color: #55DFB4;
+  .line {
     height: 10px;
     width: 30rem;
     margin-top: 3rem;
@@ -445,11 +471,11 @@ bg-white {
 }
 
 .redBorder {
-  border-color: #EB476E;
+  border-color: #FB3B64;
 }
 
 .blueBorder {
-  border-color: #07ACE6;
+  border-color: #08A6E4;
 }
 
 .greenBorder {
@@ -476,15 +502,15 @@ bg-white {
   height: 3rem;
 }
 
-.btnSmall:hover.red:hover {
+.btnSmall:hover.bg-red:hover {
   background-color: #7e263a;
 }
 
-.btnSmall:hover.blue:hover {
+.btnSmall:hover.bg-blue:hover {
   background-color: #07688f;
 }
 
-.btnSmall:hover.green:hover {
+.btnSmall:hover.bg-green:hover {
   background-color: #215544;
 }
 
@@ -514,7 +540,7 @@ bg-white {
 }
 
 .blueText {
-  color: #07ACE6;
+  color: #08A6E4;
 }
 
 .greenText {
@@ -544,6 +570,21 @@ bg-white {
 
 .priceValue {
   font-weight: 100;
+}
+
+.btn {
+  border-radius: 75px;
+  display: inline-block;
+  text-align: center;
+  line-height: 3.5rem;
+}
+
+.btnProfessional {
+  background-color: #08A6E4;
+  border-radius: 75px;
+  color: white;
+  font-family: "Open Sans";
+  display: inline-block;
 }
 
 @media screen and (min-width: 1200px) {
@@ -584,7 +625,24 @@ bg-white {
     top: 2rem;
     transition: all 1s;
   }
+  .priceBox .btnProfessional {
+    background-color: #08A6E4;
+    border-radius: 75px;
+    color: white;
+    font-family: "Open Sans";
+    display: inline-block;
+    width: 12rem;
+    height: 4rem;
+    top: 2rem;
+    transition: all 1s;
+  }
   .priceBox:hover .btn {
+    width: 12rem;
+    height: 4rem;
+    top: 1.75rem;
+    transition: all 1s;
+  }
+  .priceBox:hover .greenBtn {
     width: 12rem;
     height: 4rem;
     top: 1.75rem;
@@ -727,18 +785,18 @@ bg-white {
 
 input[type=submit] {
   cursor: pointer;
-  background: #08A6E4;
-  color: white;
-  font-family: "Open Sans";
   font-weight: bold;
   font-size: 1rem;
   width: 17.5rem;
   height: 4rem;
-  border-radius: 75px;
   display: inline-block;
   align-self: right;
   margin-top: 2rem;
   margin-left: 7rem;
+  background-color: #08A6E4;
+  border-radius: 75px;
+  color: white;
+  font-family: "Open Sans";
 }
 
 @media screen and (min-width: 1200px) {
