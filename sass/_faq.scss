@@ -32,6 +32,7 @@
     display: inline-block;
     width: 1.6rem;
     margin-right: 1rem;
+    margin-left: 1rem;
     
 }
 
@@ -107,4 +108,46 @@ input[type=submit] {
     align-self: right;
     margin-top:2rem;
     margin-left: 7rem;
+}
+
+
+
+@media screen and (min-width: 1200px){
+    .faq {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding-top: 5rem;
+    }
+    .faqContent {
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 30rem;
+    }
+
+    .row {
+        display:flex;
+        justify-content: left;
+        flex-direction: row;
+        width: 30rem;
+    }
+
+    .faqForm {
+        display: flex;
+        flex-direction: column;
+        width:30rem;
+        margin-left: 3rem;
+
+    }
+
+    .consentText {
+        width: 90%;
+    }
+
+    input[type=submit] {
+        margin-left: auto;
+        margin-right: 3rem;
+    }
+    
 }

@@ -118,7 +118,12 @@
 }
 
 .featureRow p {
-    display: inline-block; 
+    display: inline-block;
+    font-family: 'Open Sans'; 
+}
+
+.priceValue {
+    font-weight: 100;
 }
 
 @media screen and (min-width: 1200px){

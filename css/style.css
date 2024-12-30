@@ -537,6 +537,11 @@ bg-white {
 
 .featureRow p {
   display: inline-block;
+  font-family: "Open Sans";
+}
+
+.priceValue {
+  font-weight: 100;
 }
 
 @media screen and (min-width: 1200px) {
@@ -660,6 +665,7 @@ bg-white {
   display: inline-block;
   width: 1.6rem;
   margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .faqRow p {
@@ -733,6 +739,39 @@ input[type=submit] {
   margin-left: 7rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .faq {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 5rem;
+  }
+  .faqContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30rem;
+  }
+  .row {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    width: 30rem;
+  }
+  .faqForm {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    margin-left: 3rem;
+  }
+  .consentText {
+    width: 90%;
+  }
+  input[type=submit] {
+    margin-left: auto;
+    margin-right: 3rem;
+  }
+}
 .footer {
   box-shadow: 0 0.1px 40px 0px rgb(184, 184, 184);
   padding: 2rem 2rem;
@@ -767,6 +806,17 @@ input[type=submit] {
   margin-left: 1rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+  }
+  .socials {
+    margin-top: 3rem;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
