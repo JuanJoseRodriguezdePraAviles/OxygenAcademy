@@ -1,3 +1,4 @@
+@import 'mixins';
 .sellMore {
     width: 310px;
     height: 213px;
@@ -21,9 +22,9 @@
     margin: 1rem 2rem;
 }
 
-.btn {
+.btnSellMore {
     
-    border-radius: 75px;
+    @include blueBtn; 
     display: inline-block;
     text-align: center;
     line-height: 3.5rem;
@@ -31,13 +32,14 @@
 
 }
 
+
 .btnBig {
     width: 310px;
     height: 57px;
 }
 
 .btnBig:hover {
-    background-color: #07688f;
+    background-color: $blue;
 }
 
 .btn a {
@@ -52,6 +54,9 @@
 @media  screen and (min-width: 1200px){
     .sellMore {
         width: 100%;
+    }
+    .greenBtn:hover {
+        background-color: #215544;
     }
 }
 

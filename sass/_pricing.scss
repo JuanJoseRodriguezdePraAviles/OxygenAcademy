@@ -5,7 +5,7 @@
     background-color: white;
 }
 .cards h3 {
-    font-family: 'Raleway';
+    font-family: $font-raleway;
     font-size: 2rem;
 
 }
@@ -23,16 +23,18 @@
 }
 
 .redBorder{
-    border-color: #EB476E;
+    border-color: $red;
 }
 
 .blueBorder {
-    border-color: #07ACE6;
+    border-color: $blue;
 }
 
 .greenBorder {
-    border-color: #55DFB4;
+    border-color: $green;
 }
+
+
 
 .columnsContainer {
     display: inline-block;
@@ -56,32 +58,36 @@
     height: 3rem;
 }
 
-.btnSmall:hover.red:hover {
+.btnSmall:hover.bg-red:hover {
     background-color: #7e263a;
 }
 
-.btnSmall:hover.blue:hover {
+.btnSmall:hover.bg-blue:hover {
     background-color: #07688f;
 }
 
-.btnSmall:hover.green:hover {
+.btnSmall:hover.bg-green:hover {
     background-color: #215544;
 }
+
+
 
 .priceBox .btn {
     position: relative;
     top: 2rem;
 }
 
+
+
 .cardColumn h4 {
-    font-family: 'Raleway';
+    font-family: $font-raleway;
     position:relative;
     top: 0rem;
     
 }
 
 .cardColumn h3 {
-    font-family: 'Open Sans';
+    font-family: $font-open-sans;
     position: relative;
     top: 0rem;
     
@@ -93,15 +99,15 @@
 }
 
 .redText {
-    color: #FB3B64;
+    color: $red;
 }
 
 .blueText {
-    color: #07ACE6;
+    color: $blue;
 }
 
 .greenText {
-    color: #55DFB4;
+    color: $green;
 }
 
 .whiteText {
@@ -122,11 +128,25 @@
 
 .featureRow p {
     display: inline-block;
-    font-family: 'Open Sans'; 
+    font-family: $font-open-sans; 
 }
 
 .priceValue {
     font-weight: 100;
+}
+
+.btn {
+    border-radius: 75px;
+    display: inline-block;
+    text-align: center;
+    line-height: 3.5rem;
+
+
+}
+
+.btnProfessional {
+    @include blueBtn;
+    display: inline-block;
 }
 
 @media screen and (min-width: 1200px){
@@ -181,11 +201,30 @@
         transition: all 1s;
     }
 
+    .priceBox .btnProfessional {
+        @include blueBtn;
+        display: inline-block;
+        width: 12rem;
+        height: 4rem;
+        top: 2rem;
+        transition: all 1s;
+    }
+
+
+
     .priceBox:hover .btn {
         width: 12rem;
         height: 4rem;
         top: 1.75rem;
         transition: all 1s;
+    }
+
+    .priceBox:hover .greenBtn {
+        width: 12rem;
+        height: 4rem;
+        top: 1.75rem;
+        transition: all 1s;
+
     }
 
 
@@ -224,7 +263,7 @@
         margin: 1rem 0;
         font-size: 3.5rem;
         font-weight: 100;
-        font-family: 'Open Sans';
+        font-family: $font-open-sans;
 
     }
 

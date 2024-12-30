@@ -1,3 +1,4 @@
+@import 'mixins';
 .header {
     position: relative;
     clear: left;
@@ -12,7 +13,7 @@
 .header h1 {
     font-family: "Raleway", sans-serif;
     font-weight: 300;
-    color: #08A6E4;
+    color: $blue;
     line-height:37px;
     font-size: 37px;
     width: 206px;
@@ -54,12 +55,12 @@
 
     .menuLink {
         display:flex;
-        border-bottom: 5px solid #08A6E4;
+        border-bottom: 5px solid $blue;
         align-items: center;
     }
 
     .menuLink p {
-        font-family: 'Open Sans';
+        font-family: $font-open-sans;
         font-size: 0.75rem;
         padding-right: 0.5rem;
         padding-left: 0.5rem

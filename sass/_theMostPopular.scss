@@ -1,3 +1,4 @@
+@import 'mixins';
 .mostPopular {
     
 }
@@ -7,7 +8,7 @@ bg-white {
 }
 
 .mostPopular h3 {
-    font-family: 'Raleway';
+    font-family: $font-raleway;
     font-weight: 300px;
     font-size: 2.5rem;
 }
@@ -39,6 +40,14 @@ bg-white {
     margin: 1rem;
 }
 
+.smallBlueCircle {
+    width: 3rem;
+    height:3rem;
+    @include blueCircle;
+}
+
+
+
 .icon {
     height: 2.5rem;
     width: 2.3rem;
@@ -55,15 +64,18 @@ bg-white {
     top: 0.65rem;
 }
 
-.red {
-    background-color: #FB3B64;
+.bg-red {
+    background-color: $red;
 }
-.blue {
-    background-color: #08A6E4;
+.bg-blue {
+    background-color: $blue;
 }
-.green{
-    background-color: #55DFB4;
+
+.bg-green {
+    background-color: $green;
+    
 }
+
 
 @media  screen and (min-width: 1200px){
     .mostPopular {
@@ -77,6 +89,13 @@ bg-white {
     }
 
     .circle {
+        display: inline-block;
+        border-radius: 100%;
+        width: 6rem;
+        height:6rem;
+        margin: 1rem;
+    }
+    .smallBlueCircle {
         display: inline-block;
         border-radius: 100%;
         width: 6rem;
