@@ -432,6 +432,8 @@ bg-white {
 }
 
 .priceBox {
+  margin: 2rem 2rem;
+  display: inline-block;
   display: inline-block;
   text-align: center;
   margin: 4rem 2rem;

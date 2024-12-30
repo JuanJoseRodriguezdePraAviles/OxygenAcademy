@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .cards {
     
     background-color: white;
@@ -9,6 +11,7 @@
 }
 
 .priceBox {
+    @include priceBox;
     display: inline-block;
     text-align: center;
     margin: 4rem 2rem;
