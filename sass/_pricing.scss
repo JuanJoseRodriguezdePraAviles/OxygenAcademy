@@ -1,20 +1,22 @@
 @import 'mixins';
 
 .cards {
-    
+    padding-top: 4rem;
     background-color: white;
 }
 .cards h3 {
     font-family: $font-raleway;
-    font-size: 2rem;
+    font-size: 3rem;
 
 }
+
+
 
 .priceBox {
     @include priceBox;
     display: inline-block;
     text-align: center;
-    margin: 4rem 2rem;
+    margin: 2rem 2rem 2rem 2rem;
     border-style: solid;
     border-radius: 10%;
     width: 19rem;
@@ -53,6 +55,20 @@
 
 }
 
+.cardColumn p {
+    font-family: $font-raleway;
+}
+
+.price {
+    position: relative;
+    top: -3rem;
+}
+
+.priceLimited {
+    position: relative;
+    top: -1rem;
+}
+
 .btnSmall {
     width: 10rem;
     height: 3rem;
@@ -74,7 +90,7 @@
 
 .priceBox .btn {
     position: relative;
-    top: 2rem;
+    top: 0.5rem;
 }
 
 
@@ -95,7 +111,6 @@
 
 .cardColumn p {
     position:relative;
-    //top: 2rem;
 }
 
 .redText {
@@ -139,7 +154,7 @@
     border-radius: 75px;
     display: inline-block;
     text-align: center;
-    line-height: 3.5rem;
+    line-height: 3rem;
 
 
 }
@@ -155,6 +170,7 @@
         align-content: top;
         justify-content: center;
         flex-direction: column;
+        width:100%;
     }
 
     .priceBoxes {
@@ -178,28 +194,25 @@
         
     }
 
-    .priceBox:hover.redBorder {
+    .priceBox:hover.redBorder, .priceBox:hover .btn.btnSmall.bg-red  {
         box-shadow: 5px 5px 20px 0px #f0728f;
         
     }
-    .priceBox:hover.blueBorder {
+    
+
+    .priceBox:hover.blueBorder, .priceBox:hover .btnProfessional {
         box-shadow: 5px 5px 20px 0px #3bb3df;
         
     }
 
-    .priceBox:hover.greenBorder {
+
+    .priceBox:hover.greenBorder,  .priceBox:hover .btn.btnSmall.bg-green{
         box-shadow: 5px 5px 20px 0px #72ddbb;
         
     }
 
     
 
-    .priceBox .btn {
-        width: 12rem;
-        height: 4rem;
-        top: 2rem;
-        transition: all 1s;
-    }
 
     .priceBox .btnProfessional {
         @include blueBtn;
@@ -215,8 +228,18 @@
     .priceBox:hover .btn {
         width: 12rem;
         height: 4rem;
-        top: 1.75rem;
+        top: 1rem;
         transition: all 1s;
+    }
+
+    .priceBox .btn.btnSmall.bg-red {
+        position: relative;
+        top: 0.5rem;
+    }
+
+    .priceBox:hover .btn.btnSmall.bg-red {
+        position: relative;
+        top: 2rem;
     }
 
     .priceBox:hover .greenBtn {
@@ -239,7 +262,16 @@
 
     .priceBox .btn {
         position:relative;
-        top: 0.2rem;
+        top: -0.5rem;
+        width: 12rem;
+        height: 4rem;
+        transition: all 1s;
+        line-height: 4rem;
+    }
+
+    .price {
+        position: relative;
+        top:-1rem;
     }
 
     .cardColumn {

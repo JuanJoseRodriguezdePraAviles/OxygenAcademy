@@ -1,19 +1,23 @@
-
+@import 'mixins';
 
 .laptopImage {
-    background-image: url("../images/Background.png");
-    height: 300px;
-    width: 779px;
+    background-color: white;
+    background-image: $small-laptop;
+    background-repeat: no-repeat;
+    height:20rem;
+    width: 30rem;
     position: relative;
-    left: -165px;
+    left: 0px;
+    background-size:100% 100%;
 
     
 }
 
 @media  screen and (min-width: 1200px){
     .laptopImage {
+        background-image: $big-laptop;
         background-repeat: no-repeat;
-        transform: scale(1.1);
+        transform: scale(1.0);
         width: 100%;
         background-position: calc(100% + 3rem);
         min-height: 35rem; 

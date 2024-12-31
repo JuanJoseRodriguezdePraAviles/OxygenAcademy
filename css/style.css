@@ -2,12 +2,12 @@
   position: relative;
   clear: left;
   box-shadow: 0 0.1px 5px 0px gray;
-  height: 5rem;
+  height: 5.5rem;
 }
 
 .header h1, .menuIcon {
   display: inline-block;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .header h1 {
@@ -15,18 +15,25 @@
   font-weight: 300;
   color: #08A6E4;
   line-height: 37px;
-  font-size: 37px;
+  font-size: 2.5rem;
   width: 206px;
   height: 37px;
   text-align: left;
+  margin-left: 1.5rem;
 }
 
 .menuIcon {
-  margin-left: 7rem;
+  position: relative;
+  top: 0;
+  right: -12rem;
   padding-top: 1rem;
   margin-bottom: 0;
   width: 1.5rem;
   height: 2rem;
+}
+
+.menuExtended {
+  visibility: hidden;
 }
 
 @media screen and (min-width: 1200px) {
@@ -47,6 +54,7 @@
     display: flex;
     justify-content: space-around;
     width: 35rem;
+    visibility: visible;
   }
   .menuLink {
     display: flex;
@@ -66,9 +74,17 @@
   background-color: #F7F7F7;
 }
 
+@media screen and (min-width: 1200px) {
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 .sellMore {
-  width: 310px;
-  height: 213px;
+  width: 100%;
+  height: 15rem;
   margin-right: auto;
   margin-left: auto;
   background-color: white;
@@ -77,16 +93,16 @@
 .sellMore h2 {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .sellMore p {
   font-family: "Open Sans";
   font-weight: 400;
-  size: 2rem;
+  font-size: 1.2rem;
   height: 57px;
-  margin: 1rem 2rem;
+  margin: 1rem 4rem;
 }
 
 .btnSellMore {
@@ -94,18 +110,20 @@
   border-radius: 75px;
   color: white;
   font-family: "Open Sans";
+  font-weight: bold;
   display: inline-block;
   text-align: center;
-  line-height: 3.5rem;
+  line-height: 5rem;
+}
+
+.btnSellMore:hover {
+  background-color: #07688f;
 }
 
 .btnBig {
-  width: 310px;
-  height: 57px;
-}
-
-.btnBig:hover {
-  background-color: #08A6E4;
+  width: 25rem;
+  height: 5rem;
+  box-shadow: 5px 5px 20px 0px #3bb3df;
 }
 
 .btn a {
@@ -124,31 +142,41 @@
   }
 }
 .laptopImage {
-  background-image: url("../images/Background.png");
-  height: 300px;
-  width: 779px;
+  background-color: white;
+  background-image: url("../images/BackgroundSmall.png");
+  background-repeat: no-repeat;
+  height: 20rem;
+  width: 30rem;
   position: relative;
-  left: -165px;
+  left: 0px;
+  background-size: 100% 100%;
 }
 
 @media screen and (min-width: 1200px) {
   .laptopImage {
+    background-image: url("../images/Background.png");
     background-repeat: no-repeat;
-    transform: scale(1.1);
+    transform: scale(1);
     width: 100%;
     background-position: calc(100% + 3rem);
     min-height: 35rem;
     margin-bottom: 3rem;
   }
 }
+.mostPopular {
+  background-color: white;
+  padding-bottom: 2rem;
+}
+
 bg-white {
   background-color: white;
 }
 
 .mostPopular h3 {
   font-family: "Raleway";
-  font-weight: 300px;
-  font-size: 2.5rem;
+  font-weight: 100px;
+  font-size: 2rem;
+  margin: auto 6rem;
 }
 
 .cardData {
@@ -159,8 +187,10 @@ bg-white {
 .cardData h4 {
   font-family: "Raleway";
   font-weight: bolder;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.4rem;
   margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  margin-left: 1rem;
 }
 
 .cardData p {
@@ -171,14 +201,14 @@ bg-white {
 .circle {
   display: inline-block;
   border-radius: 100%;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   margin: 1rem;
 }
 
 .smallBlueCircle {
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   background-color: #08A6E4;
   display: inline-block;
   border-radius: 100%;
@@ -186,19 +216,19 @@ bg-white {
 }
 
 .icon {
-  height: 2.5rem;
-  width: 2.3rem;
+  height: 3rem;
+  width: 2.6rem;
   position: relative;
-  left: 1rem;
-  top: 0.2rem;
+  left: 1.5rem;
+  top: 0.5rem;
 }
 
 .iconLong {
-  height: 1.5rem;
-  width: 3rem;
+  height: 2rem;
+  width: 4rem;
   position: relative;
-  left: 1rem;
-  top: 0.65rem;
+  left: 1.5rem;
+  top: 0.95rem;
 }
 
 .bg-red {
@@ -259,51 +289,64 @@ bg-white {
   width: 90%;
 }
 
-.benefitBox, .benefitBoxExtended {
+.benefitBox, .benefitBoxExtended, .iPhoneBox {
   background-color: white;
-  margin: 1rem;
+  margin: 2rem;
 }
 
-.benefitBox h3 {
+.benefitText {
+  margin: 0.5rem 1rem;
+  padding-top: 2rem;
+}
+
+.benefitBox h3, .benefitText h3 {
   font-family: "Raleway";
   font-weight: 400px;
   font-size: 1.8rem;
   text-align: left;
   margin-left: 1rem;
+  margin-right: 5rem;
 }
 
-.benefitBox p {
+.benefitBox p, .benefitText p {
   font-family: "Raleway";
   font-weight: 400px;
-  font-size: 0.6rem;
+  font-size: 1rem;
   text-align: left;
   margin-left: 1rem;
-  margin-top: 1rem;
-  padding-bottom: 1rem;
+  margin-right: 1rem;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 .macbook {
   position: relative;
   rotate: -45deg;
-  left: -37px;
-  top: 30px;
-  width: 7rem;
+  left: -75px;
+  top: 55px;
+  width: 13rem;
 }
 
 .circleSquare {
   display: inline-block;
   position: relative;
-  top: -10px;
-  left: 30px;
+  top: -20px;
+  left: 4rem;
   rotate: 45deg;
-  border-radius: 40%;
-  width: 3rem;
-  height: 3rem;
-  margin: 2rem;
+  border-radius: 49%;
+  width: 5.5rem;
+  height: 5.5rem;
+  margin: 2rem 1rem 4rem 1rem;
+}
+
+.iPhoneBox {
+  background-color: white;
 }
 
 .iPhone {
-  width: 7rem;
+  position: relative;
+  top: 1rem;
+  width: 12rem;
 }
 
 .circleBig {
@@ -317,8 +360,8 @@ bg-white {
 .circleBigBlue {
   display: inline-block;
   border-radius: 100%;
-  width: 5.5rem;
-  height: 5rem;
+  width: 9rem;
+  height: 9rem;
   margin: 1rem;
   background-color: #08A6E4;
   display: inline-block;
@@ -330,6 +373,14 @@ bg-white {
   position: relative;
   left: -20px;
   top: 20px;
+}
+
+.benefitText h3 {
+  font-family: "Raleway";
+}
+
+.benefitText p {
+  font-family: "Open Sans";
 }
 
 .benefitBoxExtended h3 {
@@ -353,14 +404,19 @@ bg-white {
 
 @media screen and (min-width: 1200px) {
   .benefits {
-    margin: 10rem 15rem;
+    margin: 10rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
   }
   .benefitBox {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
     margin-left: 3rem;
-    margin-right: 3rem;
+    margin-right: 0rem;
     width: 80rem;
   }
   .iPhoneBox {
@@ -377,7 +433,7 @@ bg-white {
     border-radius: 20%;
     width: 12rem;
     height: 12rem;
-    margin: 10rem;
+    margin: 10rem 10rem 10rem 10rem;
   }
   .circleBig {
     margin-left: 4rem;
@@ -449,12 +505,13 @@ bg-white {
   }
 }
 .cards {
+  padding-top: 4rem;
   background-color: white;
 }
 
 .cards h3 {
   font-family: "Raleway";
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .priceBox {
@@ -462,7 +519,7 @@ bg-white {
   display: inline-block;
   display: inline-block;
   text-align: center;
-  margin: 4rem 2rem;
+  margin: 2rem 2rem 2rem 2rem;
   border-style: solid;
   border-radius: 10%;
   width: 19rem;
@@ -497,6 +554,20 @@ bg-white {
   top: 0rem;
 }
 
+.cardColumn p {
+  font-family: "Raleway";
+}
+
+.price {
+  position: relative;
+  top: -3rem;
+}
+
+.priceLimited {
+  position: relative;
+  top: -1rem;
+}
+
 .btnSmall {
   width: 10rem;
   height: 3rem;
@@ -516,7 +587,7 @@ bg-white {
 
 .priceBox .btn {
   position: relative;
-  top: 2rem;
+  top: 0.5rem;
 }
 
 .cardColumn h4 {
@@ -576,7 +647,7 @@ bg-white {
   border-radius: 75px;
   display: inline-block;
   text-align: center;
-  line-height: 3.5rem;
+  line-height: 3rem;
 }
 
 .btnProfessional {
@@ -584,6 +655,7 @@ bg-white {
   border-radius: 75px;
   color: white;
   font-family: "Open Sans";
+  font-weight: bold;
   display: inline-block;
 }
 
@@ -593,6 +665,7 @@ bg-white {
     align-content: top;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
   }
   .priceBoxes {
     display: flex;
@@ -610,26 +683,21 @@ bg-white {
     height: 32rem;
     transition: all 1s;
   }
-  .priceBox:hover.redBorder {
+  .priceBox:hover.redBorder, .priceBox:hover .btn.btnSmall.bg-red {
     box-shadow: 5px 5px 20px 0px #f0728f;
   }
-  .priceBox:hover.blueBorder {
+  .priceBox:hover.blueBorder, .priceBox:hover .btnProfessional {
     box-shadow: 5px 5px 20px 0px #3bb3df;
   }
-  .priceBox:hover.greenBorder {
+  .priceBox:hover.greenBorder, .priceBox:hover .btn.btnSmall.bg-green {
     box-shadow: 5px 5px 20px 0px #72ddbb;
-  }
-  .priceBox .btn {
-    width: 12rem;
-    height: 4rem;
-    top: 2rem;
-    transition: all 1s;
   }
   .priceBox .btnProfessional {
     background-color: #08A6E4;
     border-radius: 75px;
     color: white;
     font-family: "Open Sans";
+    font-weight: bold;
     display: inline-block;
     width: 12rem;
     height: 4rem;
@@ -639,8 +707,16 @@ bg-white {
   .priceBox:hover .btn {
     width: 12rem;
     height: 4rem;
-    top: 1.75rem;
+    top: 1rem;
     transition: all 1s;
+  }
+  .priceBox .btn.btnSmall.bg-red {
+    position: relative;
+    top: 0.5rem;
+  }
+  .priceBox:hover .btn.btnSmall.bg-red {
+    position: relative;
+    top: 2rem;
   }
   .priceBox:hover .greenBtn {
     width: 12rem;
@@ -657,7 +733,15 @@ bg-white {
   }
   .priceBox .btn {
     position: relative;
-    top: 0.2rem;
+    top: -0.5rem;
+    width: 12rem;
+    height: 4rem;
+    transition: all 1s;
+    line-height: 4rem;
+  }
+  .price {
+    position: relative;
+    top: -1rem;
   }
   .cardColumn {
     width: 100%;
@@ -694,6 +778,7 @@ bg-white {
 }
 .faq {
   background-color: white;
+  padding-top: 3rem;
 }
 
 .faqContent {
@@ -718,19 +803,32 @@ bg-white {
 
 .faqRow {
   text-align: left;
-  margin-bottom: 0.5rem;
+  height: 2rem;
 }
 
-.faqRow img {
+.phoneIcon {
   display: inline-block;
   width: 1.6rem;
   margin-right: 1rem;
-  margin-left: 1rem;
+  margin-left: 0rem;
+  position: relative;
+  top: 0.5rem;
+}
+
+.mailIcon {
+  display: inline-block;
+  width: 1.4rem;
+  margin-right: 1rem;
+  margin-left: 0rem;
+  position: relative;
+  top: 0.3rem;
 }
 
 .faqRow p {
+  height: 100%;
   display: inline-block;
   text-align: left;
+  align-items: center;
   font-family: "Opens Sans";
   color: #A5A5A5;
 }
@@ -738,6 +836,7 @@ bg-white {
 .faqForm {
   display: inline-block;
   text-align: left;
+  width: 100%;
 }
 
 .faqForm label {
@@ -757,7 +856,7 @@ bg-white {
 
 .faqForm label, .faqForm input {
   display: inline-block;
-  width: 80%;
+  width: 90%;
   margin: 1rem 0;
 }
 
@@ -792,11 +891,17 @@ input[type=submit] {
   display: inline-block;
   align-self: right;
   margin-top: 2rem;
-  margin-left: 7rem;
+  margin-left: 6rem;
+  margin-right: 1rem;
   background-color: #08A6E4;
   border-radius: 75px;
   color: white;
   font-family: "Open Sans";
+  font-weight: bold;
+}
+
+input[type=submit]:hover {
+  background-color: #07688f;
 }
 
 @media screen and (min-width: 1200px) {
@@ -805,12 +910,26 @@ input[type=submit] {
     justify-content: center;
     flex-direction: row;
     padding-top: 5rem;
+    width: 100%;
   }
   .faqContent {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 30rem;
+  }
+  .faqContent h2 {
+    font-size: 3rem;
+  }
+  .phoneRow {
+    position: relative;
+    top: -0.25rem;
+  }
+  .phoneIcon {
+    margin-left: 1rem;
+  }
+  .faqRow img {
+    margin-right: 0.25rem;
   }
   .row {
     display: flex;
@@ -872,6 +991,8 @@ input[type=submit] {
     justify-content: space-around;
     align-items: center;
     padding: 0;
+    position: relative;
+    z-index: 10;
   }
   .socials {
     margin-top: 3rem;
