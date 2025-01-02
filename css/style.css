@@ -5,7 +5,7 @@
   height: 5.5rem;
 }
 
-.header h1, .menuIcon {
+.header h1, .menu-icon {
   display: inline-block;
   margin: 1.5rem 0;
 }
@@ -56,8 +56,18 @@
   }
   .menu-link {
     display: flex;
-    border-bottom: 5px solid #08A6E4;
     align-items: center;
+  }
+  .menu-link--selected {
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid #08A6E4;
+  }
+  .menu-link--selected .menu-link p {
+    font-family: "Open Sans";
+    font-size: 0.75rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
   .menu-link p {
     font-family: "Open Sans";
@@ -103,7 +113,7 @@
   margin: 1rem 4rem;
 }
 
-.btn-sell-more {
+.btn--sell-more {
   background-color: #08A6E4;
   border-radius: 75px;
   color: white;
@@ -113,12 +123,10 @@
   text-align: center;
   line-height: 5rem;
 }
-
-.btn-sell-more:hover {
+.btn--sell-more:hover {
   background-color: #07688f;
 }
-
-.btn-big {
+.btn--big {
   width: 25rem;
   height: 5rem;
   box-shadow: 5px 5px 20px 0px #3bb3df;
@@ -166,7 +174,7 @@
   padding-bottom: 2rem;
 }
 
-bg-white {
+.bg--white {
   background-color: white;
 }
 
@@ -204,7 +212,7 @@ bg-white {
   margin: 1rem;
 }
 
-.small-blue-circle {
+.circle--blue--small {
   width: 4rem;
   height: 4rem;
   background-color: #08A6E4;
@@ -221,7 +229,7 @@ bg-white {
   top: 0.5rem;
 }
 
-.icon-long {
+.icon--long {
   height: 2rem;
   width: 4rem;
   position: relative;
@@ -229,15 +237,15 @@ bg-white {
   top: 0.95rem;
 }
 
-.bg-red {
+.bg--red {
   background-color: #FB3B64;
 }
 
-.bg-blue {
+.bg--blue {
   background-color: #08A6E4;
 }
 
-.bg-green {
+.bg--green {
   background-color: #55DFB4;
 }
 
@@ -258,7 +266,7 @@ bg-white {
     height: 6rem;
     margin: 1rem;
   }
-  .small-blue-circle {
+  .blue-circle--small {
     display: inline-block;
     border-radius: 100%;
     width: 6rem;
@@ -272,7 +280,7 @@ bg-white {
     left: 2rem;
     top: 0.2rem;
   }
-  .icon-long {
+  .icon--long {
     height: 3rem;
     width: 6rem;
     position: relative;
@@ -341,13 +349,13 @@ bg-white {
   background-color: white;
 }
 
-.iPhone {
+.iphone {
   position: relative;
   top: 1rem;
   width: 12rem;
 }
 
-.circle-big {
+.circle--big {
   display: inline-block;
   border-radius: 100%;
   width: 5.5rem;
@@ -355,12 +363,16 @@ bg-white {
   margin: 1rem;
 }
 
-.circle-big-blue {
+.circle {
   display: inline-block;
   border-radius: 100%;
+}
+.circle--big {
   width: 9rem;
   height: 9rem;
   margin: 1rem;
+}
+.circle--blue {
   background-color: #08A6E4;
   display: inline-block;
   border-radius: 100%;
@@ -381,7 +393,7 @@ bg-white {
   font-family: "Open Sans";
 }
 
-.benefit-box-extended h3 {
+.benefit-box--extended h3 {
   font-family: "Raleway";
   font-weight: 400px;
   font-size: 1.8rem;
@@ -389,7 +401,7 @@ bg-white {
   margin-left: 1rem;
 }
 
-.benefit-box-extended p {
+.benefit-box--extended p {
   font-family: "Raleway";
   font-weight: 400px;
   font-size: 0.8rem;
@@ -417,6 +429,15 @@ bg-white {
     margin-right: 0rem;
     width: 80rem;
   }
+  .benefit-box--extended {
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    width: 80rem;
+  }
   .iphone-box {
     display: flex;
     justify-content: space-between;
@@ -427,21 +448,27 @@ bg-white {
     background-color: white;
     margin-top: 4rem;
   }
+  .circle--big--blue {
+    margin-left: 4rem;
+    width: 24rem;
+    height: 24rem;
+    background-color: #08A6E4;
+    display: inline-block;
+    border-radius: 100%;
+    margin: 1rem;
+  }
   .circle--square {
     border-radius: 20%;
     width: 12rem;
     height: 12rem;
     margin: 10rem 10rem 10rem 10rem;
   }
-  .circle-big {
+  .circle--big {
     margin-left: 4rem;
     width: 24rem;
     height: 24rem;
   }
-  .circle-big-blue {
-    margin-left: 4rem;
-    width: 24rem;
-    height: 24rem;
+  .circle--big--blue {
     background-color: #08A6E4;
     display: inline-block;
     border-radius: 100%;
@@ -481,15 +508,6 @@ bg-white {
     margin-left: 1rem;
     border-radius: 20%;
   }
-  .benefit-box--extended {
-    background-color: #F7F7F7;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    width: 80rem;
-  }
   .square {
     margin: 5rem 0rem 0 0;
     width: 30rem;
@@ -525,15 +543,13 @@ bg-white {
   border-width: 1px;
 }
 
-.red-border {
+.border--red {
   border-color: #FB3B64;
 }
-
-.blue-border {
+.border--blue {
   border-color: #08A6E4;
 }
-
-.green-border {
+.border--green {
   border-color: #55DFB4;
 }
 
@@ -560,26 +576,27 @@ bg-white {
   position: relative;
   top: -3rem;
 }
-
-.priceLimited {
-  position: relative;
+.price--limited {
   top: -1rem;
 }
 
-.btnSmall {
+.price-box:hover .btn--green {
+  width: 12rem;
+  height: 4rem;
+  top: 1.75rem;
+  transition: all 1s;
+}
+.btn--small {
   width: 10rem;
   height: 3rem;
 }
-
-.btn-small:hover.bg-red:hover {
+.btn--small:hover.bg--red:hover {
   background-color: #7e263a;
 }
-
-.btn-small:hover.bg-blue:hover {
+.btn--small:hover.bg--blue:hover {
   background-color: #07688f;
 }
-
-.btn-small:hover.bg-green:hover {
+.btn--small:hover.bg--green:hover {
   background-color: #215544;
 }
 
@@ -604,21 +621,19 @@ bg-white {
   position: relative;
 }
 
-.redText {
+.text--red {
   color: #FB3B64;
 }
-
-.blueText {
+.text--blue {
   color: #08A6E4;
 }
-
-.greenText {
+.text--green {
   color: #55DFB4;
 }
-
-.white-text {
+.text--white {
   color: white;
   font-family: "Open Sans";
+  font-weight: bold;
 }
 
 .feature-row {
@@ -647,8 +662,7 @@ bg-white {
   text-align: center;
   line-height: 3rem;
 }
-
-.btnProfessional {
+.btn--professional {
   background-color: #08A6E4;
   border-radius: 75px;
   color: white;
@@ -681,26 +695,14 @@ bg-white {
     height: 32rem;
     transition: all 1s;
   }
-  .price-box:hover.red-border, .price-box:hover .btn.btn-small.bg-red {
+  .price-box:hover.border--red, .price-box:hover .btn.btn--small.bg--red {
     box-shadow: 5px 5px 20px 0px #f0728f;
   }
-  .price-box:hover.blue-border, .price-box:hover .btn-professional {
+  .price-box:hover.border--blue, .price-box:hover .btn--professional {
     box-shadow: 5px 5px 20px 0px #3bb3df;
   }
-  .price-box:hover.green-border, .price-box:hover .btn.btn-small.bg-green {
+  .price-box:hover.border--green, .price-box:hover .btn.btn--small.bg--green {
     box-shadow: 5px 5px 20px 0px #72ddbb;
-  }
-  .price-box .btn-professional {
-    background-color: #08A6E4;
-    border-radius: 75px;
-    color: white;
-    font-family: "Open Sans";
-    font-weight: bold;
-    display: inline-block;
-    width: 12rem;
-    height: 4rem;
-    top: 2rem;
-    transition: all 1s;
   }
   .price-box:hover .btn {
     width: 12rem;
@@ -708,19 +710,13 @@ bg-white {
     top: -1rem;
     transition: all 1s;
   }
-  .price-box .btn.btn-small.bg-red {
+  .price-box .btn.btn--small.bg--red {
     position: relative;
     top: 0.5rem;
   }
-  .price-box:hover .btn.btn-small.bg-red {
+  .price-box:hover .btn.btn--small.bg--red {
     position: relative;
     top: 0rem;
-  }
-  .price-box:hover .greenBtn {
-    width: 12rem;
-    height: 4rem;
-    top: 1.75rem;
-    transition: all 1s;
   }
   .price-box h4 {
     transition: all 1s;
@@ -813,7 +809,7 @@ bg-white {
   height: 2rem;
 }
 
-.phone-icon {
+.icon--phone {
   display: inline-block;
   width: 1.6rem;
   margin-right: 1rem;
@@ -821,8 +817,7 @@ bg-white {
   position: relative;
   top: 0.5rem;
 }
-
-.mail-icon {
+.icon--mail {
   display: inline-block;
   width: 1.4rem;
   margin-right: 1rem;

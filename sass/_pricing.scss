@@ -24,16 +24,16 @@
     border-width:  1px;
 }
 
-.red-border{
-    border-color: $red;
-}
-
-.blue-border {
-    border-color: $blue;
-}
-
-.green-border {
-    border-color: $green;
+.border {
+    &--red {
+        border-color: $red;
+    }
+    &--blue {
+        border-color: $blue;
+    }
+    &--green {
+        border-color: $green;
+    }
 }
 
 
@@ -62,28 +62,36 @@
 .price {
     position: relative;
     top: -3rem;
+    &--limited {
+        top: -1rem;
+    }
 }
 
-.priceLimited {
-    position: relative;
-    top: -1rem;
-}
 
-.btnSmall {
-    width: 10rem;
-    height: 3rem;
-}
 
-.btn-small:hover.bg-red:hover {
-    background-color: #7e263a;
-}
+.btn {
+    .price-box:hover &--green {
+            width: 12rem;
+            height: 4rem;
+            top: 1.75rem;
+            transition: all 1s;
+    }
+    &--small {
+        width: 10rem;
+        height: 3rem;
+    }
+    &--small:hover {
+        &.bg--red:hover {
+            background-color: #7e263a;
+        }
+        &.bg--blue:hover {
+            background-color: #07688f;
+        }
+        &.bg--green:hover {
+            background-color: #215544;
+        }
+    }
 
-.btn-small:hover.bg-blue:hover {
-    background-color: #07688f;
-}
-
-.btn-small:hover.bg-green:hover {
-    background-color: #215544;
 }
 
 
@@ -112,23 +120,27 @@
 .card-column p {
     position:relative;
 }
-
-.redText {
-    color: $red;
+.text {
+    &--red {
+        color: $red;
+    }
+    &--blue {
+        color: $blue;
+    }
+    &--green {
+        color: $green
+    }
+    &--white {
+        color:white;
+        font-family: "Open Sans";
+        font-weight: bold;
+    }
 }
 
-.blueText {
-    color: $blue;
-}
 
-.greenText {
-    color: $green;
-}
 
-.white-text {
-    color:white;
-    font-family: "Open Sans";
-}
+
+
 
 .feature-row {
     width: 100%;
@@ -156,13 +168,13 @@
     text-align: center;
     line-height: 3rem;
 
+    &--professional {
+        @include blue-btn;
+        display: inline-block;
+    }
 
 }
 
-.btnProfessional {
-    @include blue-btn;
-    display: inline-block;
-}
 
 @media screen and (min-width: 1200px){
     .cards {
@@ -194,33 +206,21 @@
         
     }
 
-    .price-box:hover.red-border, .price-box:hover .btn.btn-small.bg-red  {
+    .price-box:hover.border--red, .price-box:hover .btn.btn--small.bg--red  {
         box-shadow: 5px 5px 20px 0px #f0728f;
         
     }
     
 
-    .price-box:hover.blue-border, .price-box:hover .btn-professional {
+    .price-box:hover.border--blue, .price-box:hover .btn--professional {
         box-shadow: 5px 5px 20px 0px #3bb3df;
         
     }
 
 
-    .price-box:hover.green-border,  .price-box:hover .btn.btn-small.bg-green{
+    .price-box:hover.border--green,  .price-box:hover .btn.btn--small.bg--green{
         box-shadow: 5px 5px 20px 0px #72ddbb;
         
-    }
-
-    
-
-
-    .price-box .btn-professional {
-        @include blue-btn;
-        display: inline-block;
-        width: 12rem;
-        height: 4rem;
-        top: 2rem;
-        transition: all 1s;
     }
 
 
@@ -232,24 +232,15 @@
         transition: all 1s;
     }
 
-    .price-box .btn.btn-small.bg-red {
+    .price-box .btn.btn--small.bg--red {
         position: relative;
         top: 0.5rem;
     }
 
-    .price-box:hover .btn.btn-small.bg-red {
+    .price-box:hover .btn.btn--small.bg--red {
         position: relative;
         top: 0rem;
     }
-
-    .price-box:hover .greenBtn {
-        width: 12rem;
-        height: 4rem;
-        top: 1.75rem;
-        transition: all 1s;
-
-    }
-
 
     .price-box h4 {
         transition: all 1s;

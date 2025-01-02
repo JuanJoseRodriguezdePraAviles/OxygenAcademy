@@ -22,32 +22,22 @@
     margin: 1rem 4rem;
 }
 
-.btn-sell-more {
-    
-    @include blue-btn; 
-    display: inline-block;
-    text-align: center;
-    line-height: 5rem;
-
-
+.btn {
+    &--sell-more {
+        @include blue-btn; 
+        display: inline-block;
+        text-align: center;
+        line-height: 5rem;
+    }
+    &--sell-more:hover {
+        background-color: #07688f;
+    }
+    &--big {
+        width: 25rem;
+        height: 5rem;
+        box-shadow: 5px 5px 20px 0px #3bb3df;
+    }
 }
-
-.btn-sell-more:hover {
-    
-    background-color: #07688f;
-
-
-}
-
-
-.btn-big {
-    width: 25rem;
-    height: 5rem;
-    box-shadow: 5px 5px 20px 0px #3bb3df;
-}
-
-
-
 .btn a {
     color: white;
     font-family: "Open Sans";

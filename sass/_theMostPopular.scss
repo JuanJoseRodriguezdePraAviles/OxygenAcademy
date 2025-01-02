@@ -4,8 +4,10 @@
     padding-bottom: 2rem;
 }
 
-bg-white {
-    background-color: white;
+.bg {
+    &--white {
+        background-color: white;
+    }
 }
 
 .most-popular h3 {
@@ -44,10 +46,10 @@ bg-white {
     margin: 1rem;
 }
 
-.small-blue-circle {
+.circle--blue--small {
     width: 4rem;
     height:4rem;
-    @include blue-circle;
+    @include circle--blue;
 }
 
 
@@ -60,7 +62,7 @@ bg-white {
     top: 0.5rem;
 }
 
-.icon-long {
+.icon--long {
     height: 2rem;
     width: 4rem;
     position: relative;
@@ -68,14 +70,14 @@ bg-white {
     top: 0.95rem;
 }
 
-.bg-red {
+.bg--red {
     background-color: $red;
 }
-.bg-blue {
+.bg--blue {
     background-color: $blue;
 }
 
-.bg-green {
+.bg--green {
     background-color: $green;
     
 }
@@ -99,7 +101,7 @@ bg-white {
         height:6rem;
         margin: 1rem;
     }
-    .small-blue-circle {
+    .blue-circle--small {
         display: inline-block;
         border-radius: 100%;
         width: 6rem;
@@ -115,7 +117,7 @@ bg-white {
         top: 0.2rem;
     }
     
-    .icon-long {
+    .icon--long {
         height: 3rem;
         width: 6rem;
         position: relative;
