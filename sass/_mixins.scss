@@ -5,26 +5,30 @@ $green: #55DFB4;
 $font-raleway: 'Raleway';
 $font-open-sans: 'Open Sans';
 
-@mixin priceBox {
+$big-laptop: url("../images/Background.png");
+$small-laptop: url("../images/BackgroundSmall.png");
+
+@mixin price-box {
     margin: 2rem 2rem;
     display: inline-block;
   }
 
-  @mixin blueBtn {
-    background-color: $blue;
-    border-radius: 75px;
-    color: white;
-    font-family: $font-open-sans;
+@mixin blue-btn {
+  background-color: $blue;
+  border-radius: 75px;
+  color: white;
+  font-family: $font-open-sans;
+  font-weight: bold;
 
-  }
+}
 
-  @mixin blueCircle {
-    background-color: $blue;
-    display: inline-block;
-    border-radius: 100%;
-    
-    margin: 1rem;
-  }
+@mixin circle--blue {
+  background-color: $blue;
+  display: inline-block;
+  border-radius: 100%;
+  
+  margin: 1rem;
+}
 
   
 

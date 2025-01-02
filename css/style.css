@@ -2,12 +2,12 @@
   position: relative;
   clear: left;
   box-shadow: 0 0.1px 5px 0px gray;
-  height: 5rem;
+  height: 5.5rem;
 }
 
-.header h1, .menuIcon {
+.header h1, .menu-icon {
   display: inline-block;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .header h1 {
@@ -15,18 +15,25 @@
   font-weight: 300;
   color: #08A6E4;
   line-height: 37px;
-  font-size: 37px;
+  font-size: 2.5rem;
   width: 206px;
   height: 37px;
   text-align: left;
+  margin-left: 1.5rem;
 }
 
-.menuIcon {
-  margin-left: 7rem;
+.menu-icon {
+  position: relative;
+  top: 0;
+  right: -12rem;
   padding-top: 1rem;
   margin-bottom: 0;
   width: 1.5rem;
   height: 2rem;
+}
+
+.menu--extended {
+  visibility: hidden;
 }
 
 @media screen and (min-width: 1200px) {
@@ -37,23 +44,32 @@
   .header h1 {
     margin-left: 7rem;
   }
-  .menuExtended {
+  .menu--extended {
     margin-right: 3rem;
-  }
-  .menuIcon {
-    visibility: hidden;
-  }
-  .menuExtended {
     display: flex;
     justify-content: space-around;
     width: 35rem;
+    visibility: visible;
   }
-  .menuLink {
+  .menu-icon {
+    visibility: hidden;
+  }
+  .menu-link {
     display: flex;
-    border-bottom: 5px solid #08A6E4;
     align-items: center;
   }
-  .menuLink p {
+  .menu-link--selected {
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid #08A6E4;
+  }
+  .menu-link--selected .menu-link p {
+    font-family: "Open Sans";
+    font-size: 0.75rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  .menu-link p {
     font-family: "Open Sans";
     font-size: 0.75rem;
     padding-right: 0.5rem;
@@ -66,46 +82,54 @@
   background-color: #F7F7F7;
 }
 
-.sellMore {
-  width: 310px;
-  height: 213px;
+@media screen and (min-width: 1200px) {
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.sell-more {
+  width: 100%;
+  height: 15rem;
   margin-right: auto;
   margin-left: auto;
   background-color: white;
 }
 
-.sellMore h2 {
+.sell-more h2 {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.sellMore p {
+.sell-more p {
   font-family: "Open Sans";
   font-weight: 400;
-  size: 2rem;
+  font-size: 1.2rem;
   height: 57px;
-  margin: 1rem 2rem;
+  margin: 1rem 4rem;
 }
 
-.btnSellMore {
+.btn--sell-more {
   background-color: #08A6E4;
   border-radius: 75px;
   color: white;
   font-family: "Open Sans";
+  font-weight: bold;
   display: inline-block;
   text-align: center;
-  line-height: 3.5rem;
+  line-height: 5rem;
 }
-
-.btnBig {
-  width: 310px;
-  height: 57px;
+.btn--sell-more:hover {
+  background-color: #07688f;
 }
-
-.btnBig:hover {
-  background-color: #08A6E4;
+.btn--big {
+  width: 25rem;
+  height: 5rem;
+  box-shadow: 5px 5px 20px 0px #3bb3df;
 }
 
 .btn a {
@@ -116,54 +140,66 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .sellMore {
+  .sell-more {
     width: 100%;
   }
   .greenBtn:hover {
     background-color: #215544;
   }
 }
-.laptopImage {
-  background-image: url("../images/Background.png");
-  height: 300px;
-  width: 779px;
+.laptop-image {
+  background-color: white;
+  background-image: url("../images/BackgroundSmall.png");
+  background-repeat: no-repeat;
+  height: 20rem;
+  width: 30rem;
   position: relative;
-  left: -165px;
+  left: 0px;
+  background-size: 100% 100%;
 }
 
 @media screen and (min-width: 1200px) {
-  .laptopImage {
+  .laptop-image {
+    background-image: url("../images/Background.png");
     background-repeat: no-repeat;
-    transform: scale(1.1);
+    transform: scale(1);
     width: 100%;
     background-position: calc(100% + 3rem);
     min-height: 35rem;
     margin-bottom: 3rem;
   }
 }
-bg-white {
+.most-popular {
+  background-color: white;
+  padding-bottom: 2rem;
+}
+
+.bg--white {
   background-color: white;
 }
 
-.mostPopular h3 {
+.most-popular h3 {
   font-family: "Raleway";
-  font-weight: 300px;
-  font-size: 2.5rem;
+  font-weight: 100px;
+  font-size: 2rem;
+  margin: auto 6rem;
 }
 
-.cardData {
+.card-data {
   text-align: center;
   margin: 2rem;
 }
 
-.cardData h4 {
+.card-data h4 {
   font-family: "Raleway";
   font-weight: bolder;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.4rem;
   margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  margin-left: 1rem;
 }
 
-.cardData p {
+.card-data p {
   font-family: "Raleway";
   color: #A5A5A5;
 }
@@ -171,14 +207,14 @@ bg-white {
 .circle {
   display: inline-block;
   border-radius: 100%;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   margin: 1rem;
 }
 
-.smallBlueCircle {
-  width: 3rem;
-  height: 3rem;
+.circle--blue--small {
+  width: 4rem;
+  height: 4rem;
   background-color: #08A6E4;
   display: inline-block;
   border-radius: 100%;
@@ -186,40 +222,40 @@ bg-white {
 }
 
 .icon {
-  height: 2.5rem;
-  width: 2.3rem;
+  height: 3rem;
+  width: 2.6rem;
   position: relative;
-  left: 1rem;
-  top: 0.2rem;
+  left: 1.5rem;
+  top: 0.5rem;
 }
 
-.iconLong {
-  height: 1.5rem;
-  width: 3rem;
+.icon--long {
+  height: 2rem;
+  width: 4rem;
   position: relative;
-  left: 1rem;
-  top: 0.65rem;
+  left: 1.5rem;
+  top: 0.95rem;
 }
 
-.bg-red {
+.bg--red {
   background-color: #FB3B64;
 }
 
-.bg-blue {
+.bg--blue {
   background-color: #08A6E4;
 }
 
-.bg-green {
+.bg--green {
   background-color: #55DFB4;
 }
 
 @media screen and (min-width: 1200px) {
-  .mostPopular {
+  .most-popular {
     background-color: white;
     width: 100%;
     padding-bottom: 5rem;
   }
-  .dataBox {
+  .data-box {
     display: flex;
     justify-content: space-evenly;
   }
@@ -230,7 +266,7 @@ bg-white {
     height: 6rem;
     margin: 1rem;
   }
-  .smallBlueCircle {
+  .blue-circle--small {
     display: inline-block;
     border-radius: 100%;
     width: 6rem;
@@ -244,7 +280,7 @@ bg-white {
     left: 2rem;
     top: 0.2rem;
   }
-  .iconLong {
+  .icon--long {
     height: 3rem;
     width: 6rem;
     position: relative;
@@ -259,54 +295,67 @@ bg-white {
   width: 90%;
 }
 
-.benefitBox, .benefitBoxExtended {
+.benefit-box, .benefit-box--extended, .iphone-box {
   background-color: white;
-  margin: 1rem;
+  margin: 2rem;
 }
 
-.benefitBox h3 {
+.benefit-text {
+  margin: 0.5rem 1rem;
+  padding-top: 2rem;
+}
+
+.benefit-box h3, .benefit-text h3 {
   font-family: "Raleway";
   font-weight: 400px;
   font-size: 1.8rem;
   text-align: left;
   margin-left: 1rem;
+  margin-right: 5rem;
 }
 
-.benefitBox p {
+.benefit-box p, .benefit-text p {
   font-family: "Raleway";
   font-weight: 400px;
-  font-size: 0.6rem;
+  font-size: 1rem;
   text-align: left;
   margin-left: 1rem;
-  margin-top: 1rem;
-  padding-bottom: 1rem;
+  margin-right: 1rem;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 .macbook {
   position: relative;
   rotate: -45deg;
-  left: -37px;
-  top: 30px;
-  width: 7rem;
+  left: -75px;
+  top: 55px;
+  width: 13rem;
 }
 
-.circleSquare {
+.circle--square {
   display: inline-block;
   position: relative;
-  top: -10px;
-  left: 30px;
+  top: -20px;
+  left: 4rem;
   rotate: 45deg;
-  border-radius: 40%;
-  width: 3rem;
-  height: 3rem;
-  margin: 2rem;
+  border-radius: 49%;
+  width: 5.5rem;
+  height: 5.5rem;
+  margin: 2rem 1rem 4rem 1rem;
 }
 
-.iPhone {
-  width: 7rem;
+.iphone-box {
+  background-color: white;
 }
 
-.circleBig {
+.iphone {
+  position: relative;
+  top: 1rem;
+  width: 12rem;
+}
+
+.circle--big {
   display: inline-block;
   border-radius: 100%;
   width: 5.5rem;
@@ -314,12 +363,16 @@ bg-white {
   margin: 1rem;
 }
 
-.circleBigBlue {
+.circle {
   display: inline-block;
   border-radius: 100%;
-  width: 5.5rem;
-  height: 5rem;
+}
+.circle--big {
+  width: 9rem;
+  height: 9rem;
   margin: 1rem;
+}
+.circle--blue {
   background-color: #08A6E4;
   display: inline-block;
   border-radius: 100%;
@@ -332,7 +385,15 @@ bg-white {
   top: 20px;
 }
 
-.benefitBoxExtended h3 {
+.benefit-text h3 {
+  font-family: "Raleway";
+}
+
+.benefit-text p {
+  font-family: "Open Sans";
+}
+
+.benefit-box--extended h3 {
   font-family: "Raleway";
   font-weight: 400px;
   font-size: 1.8rem;
@@ -340,7 +401,7 @@ bg-white {
   margin-left: 1rem;
 }
 
-.benefitBoxExtended p {
+.benefit-box--extended p {
   font-family: "Raleway";
   font-weight: 400px;
   font-size: 0.8rem;
@@ -353,17 +414,31 @@ bg-white {
 
 @media screen and (min-width: 1200px) {
   .benefits {
-    margin: 10rem 15rem;
+    margin: 10rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
   }
-  .benefitBox {
+  .benefit-box {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
     margin-left: 3rem;
+    margin-right: 0rem;
+    width: 80rem;
+  }
+  .benefit-box--extended {
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: 3rem;
     margin-right: 3rem;
     width: 80rem;
   }
-  .iPhoneBox {
+  .iphone-box {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -373,21 +448,27 @@ bg-white {
     background-color: white;
     margin-top: 4rem;
   }
-  .circleSquare {
+  .circle--big--blue {
+    margin-left: 4rem;
+    width: 24rem;
+    height: 24rem;
+    background-color: #08A6E4;
+    display: inline-block;
+    border-radius: 100%;
+    margin: 1rem;
+  }
+  .circle--square {
     border-radius: 20%;
     width: 12rem;
     height: 12rem;
-    margin: 10rem;
+    margin: 10rem 10rem 10rem 10rem;
   }
-  .circleBig {
+  .circle--big {
     margin-left: 4rem;
     width: 24rem;
     height: 24rem;
   }
-  .circleBigBlue {
-    margin-left: 4rem;
-    width: 24rem;
-    height: 24rem;
+  .circle--big--blue {
     background-color: #08A6E4;
     display: inline-block;
     border-radius: 100%;
@@ -398,24 +479,24 @@ bg-white {
     left: -160px;
     top: 110px;
   }
-  .iPhone {
+  .iphone {
     position: relative;
     width: 32rem;
     left: 0.5rem;
     top: 1.5rem;
   }
-  .benefitText {
+  .benefit-text {
     background-color: white;
     margin: 5rem 5rem 0 0;
     padding: 4rem;
     width: 45rem;
   }
-  .benefitText h3 {
+  .benefit-text h3 {
     font-size: 3rem;
     font-family: "Raleway";
     text-align: left;
   }
-  .benefitText p {
+  .benefit-text p {
     font-size: 1.5rem;
     font-family: "Open Sans";
     text-align: left;
@@ -426,15 +507,6 @@ bg-white {
     margin-top: 3rem;
     margin-left: 1rem;
     border-radius: 20%;
-  }
-  .benefitBoxExtended {
-    background-color: #F7F7F7;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    width: 80rem;
   }
   .square {
     margin: 5rem 0rem 0 0;
@@ -449,20 +521,21 @@ bg-white {
   }
 }
 .cards {
+  padding-top: 4rem;
   background-color: white;
 }
 
 .cards h3 {
   font-family: "Raleway";
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
-.priceBox {
+.price-box {
   margin: 2rem 2rem;
   display: inline-block;
   display: inline-block;
   text-align: center;
-  margin: 4rem 2rem;
+  margin: 2rem 2rem 2rem 2rem;
   border-style: solid;
   border-radius: 10%;
   width: 19rem;
@@ -470,25 +543,23 @@ bg-white {
   border-width: 1px;
 }
 
-.redBorder {
+.border--red {
   border-color: #FB3B64;
 }
-
-.blueBorder {
+.border--blue {
   border-color: #08A6E4;
 }
-
-.greenBorder {
+.border--green {
   border-color: #55DFB4;
 }
 
-.columnsContainer {
+.columns-container {
   display: inline-block;
   height: 100%;
   min-height: 15rem;
 }
 
-.cardColumn {
+.card-column {
   width: 49%;
   height: 100%;
   display: inline-block;
@@ -497,78 +568,91 @@ bg-white {
   top: 0rem;
 }
 
-.btnSmall {
+.card-column p {
+  font-family: "Raleway";
+}
+
+.price {
+  position: relative;
+  top: -3rem;
+}
+.price--limited {
+  top: -1rem;
+}
+
+.price-box:hover .btn--green {
+  width: 12rem;
+  height: 4rem;
+  top: 1.75rem;
+  transition: all 1s;
+}
+.btn--small {
   width: 10rem;
   height: 3rem;
 }
-
-.btnSmall:hover.bg-red:hover {
+.btn--small:hover.bg--red:hover {
   background-color: #7e263a;
 }
-
-.btnSmall:hover.bg-blue:hover {
+.btn--small:hover.bg--blue:hover {
   background-color: #07688f;
 }
-
-.btnSmall:hover.bg-green:hover {
+.btn--small:hover.bg--green:hover {
   background-color: #215544;
 }
 
-.priceBox .btn {
+.price-box .btn {
   position: relative;
-  top: 2rem;
+  top: 0.5rem;
 }
 
-.cardColumn h4 {
+.card-column h4 {
   font-family: "Raleway";
   position: relative;
   top: 0rem;
 }
 
-.cardColumn h3 {
+.card-column h3 {
   font-family: "Open Sans";
   position: relative;
   top: 0rem;
 }
 
-.cardColumn p {
+.card-column p {
   position: relative;
 }
 
-.redText {
+.text--red {
   color: #FB3B64;
 }
-
-.blueText {
+.text--blue {
   color: #08A6E4;
 }
-
-.greenText {
+.text--green {
   color: #55DFB4;
 }
-
-.whiteText {
+.text--white {
   color: white;
   font-family: "Open Sans";
+  font-weight: bold;
 }
 
-.featureRow {
+.feature-row {
   width: 100%;
   margin: 1rem 1rem 1rem 0;
   text-align: left;
 }
 
-.featureRow input {
+.feature-row input {
   display: inline-block;
   margin-right: 10px;
 }
 
-.featureRow p {
+.feature-row p {
   display: inline-block;
   font-family: "Open Sans";
 }
 
-.priceValue {
+.price-value {
   font-weight: 100;
 }
 
@@ -576,14 +660,14 @@ bg-white {
   border-radius: 75px;
   display: inline-block;
   text-align: center;
-  line-height: 3.5rem;
+  line-height: 3rem;
 }
-
-.btnProfessional {
+.btn--professional {
   background-color: #08A6E4;
   border-radius: 75px;
   color: white;
   font-family: "Open Sans";
+  font-weight: bold;
   display: inline-block;
 }
 
@@ -593,161 +677,178 @@ bg-white {
     align-content: top;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
   }
-  .priceBoxes {
+  .price-boxes {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .priceBox {
+  .price-box {
     width: 25rem;
     border-radius: 5%;
     height: 20rem;
     transition: all 1s;
   }
-  .priceBox:hover {
+  .price-box:hover {
     width: 26rem;
     height: 32rem;
     transition: all 1s;
   }
-  .priceBox:hover.redBorder {
+  .price-box:hover.border--red, .price-box:hover .btn.btn--small.bg--red {
     box-shadow: 5px 5px 20px 0px #f0728f;
   }
-  .priceBox:hover.blueBorder {
+  .price-box:hover.border--blue, .price-box:hover .btn--professional {
     box-shadow: 5px 5px 20px 0px #3bb3df;
   }
-  .priceBox:hover.greenBorder {
+  .price-box:hover.border--green, .price-box:hover .btn.btn--small.bg--green {
     box-shadow: 5px 5px 20px 0px #72ddbb;
   }
-  .priceBox .btn {
+  .price-box:hover .btn {
     width: 12rem;
     height: 4rem;
-    top: 2rem;
+    top: -1rem;
     transition: all 1s;
   }
-  .priceBox .btnProfessional {
-    background-color: #08A6E4;
-    border-radius: 75px;
-    color: white;
-    font-family: "Open Sans";
-    display: inline-block;
-    width: 12rem;
-    height: 4rem;
-    top: 2rem;
+  .price-box .btn.btn--small.bg--red {
+    position: relative;
+    top: 0.5rem;
+  }
+  .price-box:hover .btn.btn--small.bg--red {
+    position: relative;
+    top: 0rem;
+  }
+  .price-box h4 {
     transition: all 1s;
   }
-  .priceBox:hover .btn {
-    width: 12rem;
-    height: 4rem;
-    top: 1.75rem;
-    transition: all 1s;
-  }
-  .priceBox:hover .greenBtn {
-    width: 12rem;
-    height: 4rem;
-    top: 1.75rem;
-    transition: all 1s;
-  }
-  .priceBox h4 {
-    transition: all 1s;
-  }
-  .columnsContainer {
+  .columns-container {
     display: flex;
     flex-direction: row;
   }
-  .priceBox .btn {
+  .price-box .btn {
     position: relative;
-    top: 0.2rem;
+    top: -0.5rem;
+    width: 12rem;
+    height: 4rem;
+    transition: all 1s;
+    line-height: 4rem;
   }
-  .cardColumn {
+  .price {
+    position: relative;
+    top: -1rem;
+  }
+  .card-column {
     width: 100%;
     height: 50%;
   }
-  .cardColumn h4 {
+  .card-column h4 {
     margin: 2rem;
     font-size: 1.5rem;
     font-weight: 300px;
   }
-  .priceBox:hover h4 {
+  .price-box:hover h4 {
     font-size: 2rem;
     transition: all 1s;
   }
-  .cardColumn h3 {
+  .price-box:hover h3 {
+    font-size: 5rem;
+    transition: all 1s;
+  }
+  .card-column h3 {
     margin: 1rem 0;
     font-size: 3.5rem;
     font-weight: 100;
     font-family: "Open Sans";
+    transition: all 1s;
   }
-  .featureRow {
+  .feature-row {
     display: flex;
     justify-content: center;
   }
-  .priceBox {
+  .price-box {
     height: 30rem;
   }
-  .featureRow {
+  .feature-row {
     margin: 1.5rem auto;
   }
-  .featureRow img {
+  .feature-row img {
     margin-right: 1rem;
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    top: 0.25rem;
   }
 }
 .faq {
   background-color: white;
+  padding-top: 3rem;
 }
 
-.faqContent {
+.faq-content {
   margin-bottom: 3rem;
   align-content: center;
   margin-left: 2.5rem;
 }
 
-.faqContent h2, .faqContent p {
+.faq-content h2, .faq-content p {
   text-align: left;
 }
 
-.faqContent h2 {
+.faq-content h2 {
   font-family: "Raleway";
   font-size: 2.5rem;
 }
 
-.faqContent p {
+.faq-content p {
   font-family: "Open Sans";
   font-size: 1rem;
 }
 
-.faqRow {
+.faq-row {
   text-align: left;
-  margin-bottom: 0.5rem;
+  height: 2rem;
 }
 
-.faqRow img {
+.icon--phone {
   display: inline-block;
   width: 1.6rem;
   margin-right: 1rem;
-  margin-left: 1rem;
+  margin-left: 0rem;
+  position: relative;
+  top: 0.5rem;
+}
+.icon--mail {
+  display: inline-block;
+  width: 1.4rem;
+  margin-right: 1rem;
+  margin-left: 0rem;
+  position: relative;
+  top: 0.3rem;
 }
 
-.faqRow p {
+.faq-row p {
+  height: 100%;
   display: inline-block;
   text-align: left;
+  align-items: center;
   font-family: "Opens Sans";
   color: #A5A5A5;
 }
 
-.faqForm {
+.faq-form {
   display: inline-block;
   text-align: left;
+  width: 100%;
 }
 
-.faqForm label {
+.faq-form label {
   font-family: "Open Sans";
   color: #08A6E4;
   font-size: 0.9rem;
   letter-spacing: 0.25rem;
 }
 
-.faqForm input {
+.faq-form input {
   background-color: white;
   border-top: none;
   border-right: none;
@@ -755,28 +856,28 @@ bg-white {
   height: 2rem;
 }
 
-.faqForm label, .faqForm input {
+.faq-form label, .faq-form input {
   display: inline-block;
-  width: 80%;
+  width: 90%;
   margin: 1rem 0;
 }
 
-.consentBox {
+.consent-box {
   text-align: left;
   margin-right: 1rem;
 }
 
-.consentBox input, .consentText {
+.consent-box input, .consent-text {
   display: inline-block;
   vertical-align: top;
 }
 
-.consentBox input {
+.consent-box input {
   width: auto;
   margin-top: 0;
 }
 
-.consentText {
+.consent-text {
   font-size: 0.25rem;
   color: #707070;
   width: 23rem;
@@ -792,11 +893,33 @@ input[type=submit] {
   display: inline-block;
   align-self: right;
   margin-top: 2rem;
-  margin-left: 7rem;
+  margin-left: 6rem;
+  margin-right: 1rem;
   background-color: #08A6E4;
   border-radius: 75px;
   color: white;
   font-family: "Open Sans";
+  font-weight: bold;
+}
+
+input[type=submit]:hover {
+  background-color: #07688f;
+}
+
+.checkbox {
+  appearance: none;
+  min-width: 1rem;
+  min-height: 2rem;
+  background-clip: content-box;
+  padding: 1rem;
+  background: url("../images/CheckBoxGray.png");
+  background-repeat: no-repeat;
+}
+
+.checkbox:checked {
+  min-width: 1rem;
+  background: url("../images/Checkmark.png");
+  background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 1200px) {
@@ -805,12 +928,26 @@ input[type=submit] {
     justify-content: center;
     flex-direction: row;
     padding-top: 5rem;
+    width: 100%;
   }
-  .faqContent {
+  .faq-content {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 30rem;
+  }
+  .faq-content h2 {
+    font-size: 3rem;
+  }
+  .phone-row {
+    position: relative;
+    top: -0.25rem;
+  }
+  .phone-icon {
+    margin-left: 1rem;
+  }
+  .faq-row img {
+    margin-right: 0.25rem;
   }
   .row {
     display: flex;
@@ -818,13 +955,13 @@ input[type=submit] {
     flex-direction: row;
     width: 30rem;
   }
-  .faqForm {
+  .faq-form {
     display: flex;
     flex-direction: column;
     width: 30rem;
     margin-left: 3rem;
   }
-  .consentText {
+  .consent-text {
     width: 90%;
   }
   input[type=submit] {
@@ -872,6 +1009,8 @@ input[type=submit] {
     justify-content: space-around;
     align-items: center;
     padding: 0;
+    position: relative;
+    z-index: 10;
   }
   .socials {
     margin-top: 3rem;

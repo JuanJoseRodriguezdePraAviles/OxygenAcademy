@@ -1,47 +1,43 @@
 @import 'mixins';
-.sellMore {
-    width: 310px;
-    height: 213px;
+.sell-more {
+    width: 100%;
+    height: 15rem;
     margin-right: auto;
     margin-left:auto;
     background-color: white;
 }
 
-.sellMore h2 {
+.sell-more h2 {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
-.sellMore p {
+.sell-more p {
     font-family: "Open Sans";
     font-weight: 400;
-    size: 2rem;
+    font-size: 1.2rem;
     height: 57px;
-    margin: 1rem 2rem;
+    margin: 1rem 4rem;
 }
 
-.btnSellMore {
-    
-    @include blueBtn; 
-    display: inline-block;
-    text-align: center;
-    line-height: 3.5rem;
-
-
+.btn {
+    &--sell-more {
+        @include blue-btn; 
+        display: inline-block;
+        text-align: center;
+        line-height: 5rem;
+    }
+    &--sell-more:hover {
+        background-color: #07688f;
+    }
+    &--big {
+        width: 25rem;
+        height: 5rem;
+        box-shadow: 5px 5px 20px 0px #3bb3df;
+    }
 }
-
-
-.btnBig {
-    width: 310px;
-    height: 57px;
-}
-
-.btnBig:hover {
-    background-color: $blue;
-}
-
 .btn a {
     color: white;
     font-family: "Open Sans";
@@ -52,7 +48,7 @@
 }
 
 @media  screen and (min-width: 1200px){
-    .sellMore {
+    .sell-more {
         width: 100%;
     }
     .greenBtn:hover {

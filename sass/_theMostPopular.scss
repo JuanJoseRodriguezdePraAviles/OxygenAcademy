@@ -1,32 +1,38 @@
 @import 'mixins';
-.mostPopular {
-    
-}
-
-bg-white {
+.most-popular {
     background-color: white;
+    padding-bottom: 2rem;
 }
 
-.mostPopular h3 {
+.bg {
+    &--white {
+        background-color: white;
+    }
+}
+
+.most-popular h3 {
     font-family: $font-raleway;
-    font-weight: 300px;
-    font-size: 2.5rem;
+    font-weight: 100px;
+    font-size: 2rem;
+    margin: auto 6rem;
 }
 
-.cardData {
+.card-data {
     text-align: center;
     margin: 2rem;
 }
 
-.cardData h4 {
-    font-family: "Raleway";
+.card-data h4 {
+    font-family: $font-raleway;
     font-weight: bolder;
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.4rem;
     margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    margin-left: 1rem;
 
 }
 
-.cardData p {
+.card-data p {
     font-family: "Raleway";
     color: #A5A5A5;
     
@@ -35,55 +41,55 @@ bg-white {
 .circle {
     display: inline-block;
     border-radius: 100%;
-    width: 3rem;
-    height:3rem;
+    width: 4rem;
+    height:4rem;
     margin: 1rem;
 }
 
-.smallBlueCircle {
-    width: 3rem;
-    height:3rem;
-    @include blueCircle;
+.circle--blue--small {
+    width: 4rem;
+    height:4rem;
+    @include circle--blue;
 }
 
 
 
 .icon {
-    height: 2.5rem;
-    width: 2.3rem;
+    height: 3rem;
+    width: 2.6rem;
     position: relative;
-    left: 1rem;
-    top: 0.2rem;
+    left: 1.5rem;
+    top: 0.5rem;
 }
 
-.iconLong {
-    height: 1.5rem;
-    width: 3rem;
+.icon--long {
+    height: 2rem;
+    width: 4rem;
     position: relative;
-    left: 1rem;
-    top: 0.65rem;
+    left: 1.5rem;
+    top: 0.95rem;
 }
 
-.bg-red {
+.bg--red {
     background-color: $red;
 }
-.bg-blue {
+.bg--blue {
     background-color: $blue;
 }
 
-.bg-green {
+.bg--green {
     background-color: $green;
     
 }
 
 
 @media  screen and (min-width: 1200px){
-    .mostPopular {
+    .most-popular {
         background-color: white;
         width: 100%;
         padding-bottom: 5rem;
     }
-    .dataBox {
+    .data-box {
         display: flex;
         justify-content: space-evenly;
     }
@@ -95,7 +101,7 @@ bg-white {
         height:6rem;
         margin: 1rem;
     }
-    .smallBlueCircle {
+    .blue-circle--small {
         display: inline-block;
         border-radius: 100%;
         width: 6rem;
@@ -111,7 +117,7 @@ bg-white {
         top: 0.2rem;
     }
     
-    .iconLong {
+    .icon--long {
         height: 3rem;
         width: 6rem;
         position: relative;

@@ -3,11 +3,11 @@
     position: relative;
     clear: left;
     box-shadow: 0 0.1px 5px 0px gray;
-    height: 5rem;
+    height: 5.5rem;
 }
-.header h1, .menuIcon{
+.header h1, .menu-icon{
     display: inline-block;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     
 }
 .header h1 {
@@ -15,18 +15,28 @@
     font-weight: 300;
     color: $blue;
     line-height:37px;
-    font-size: 37px;
+    font-size: 2.5rem;
     width: 206px;
     height: 37px;
     text-align: left;
+    margin-left: 1.5rem;
 }
 
-.menuIcon {
-    margin-left: 7rem;
+.menu-icon {
+    position:relative;
+    top: 0;
+    right: -12rem;
     padding-top: 1rem;
     margin-bottom: 0;
     width: 1.5rem;
     height: 2rem;
+}
+
+.menu {
+    &--extended {
+        visibility: hidden;
+    }
+    
 }
 
 @media  screen and (min-width: 1200px){
@@ -39,27 +49,39 @@
         margin-left: 7rem;
     }
 
-    .menuExtended {
-        margin-right: 3rem;
+    .menu {
+        &--extended {
+            margin-right: 3rem;
+            display: flex;
+            justify-content: space-around;
+            width: 35rem;
+            visibility: visible;
+        }
+        
     }
 
-    .menuIcon {
+    .menu-icon {
         visibility: hidden;
     }
 
-    .menuExtended {
-        display: flex;
-        justify-content: space-around;
-        width: 35rem;
-    }
-
-    .menuLink {
+    .menu-link {
         display:flex;
-        border-bottom: 5px solid $blue;
         align-items: center;
+
+        &--selected {
+            display:flex;
+            align-items: center;
+            border-bottom: 5px solid $blue;
+            .menu-link p {
+                font-family: $font-open-sans;
+                font-size: 0.75rem;
+                padding-right: 0.5rem;
+                padding-left: 0.5rem
+            }
+        }
     }
 
-    .menuLink p {
+    .menu-link p {
         font-family: $font-open-sans;
         font-size: 0.75rem;
         padding-right: 0.5rem;

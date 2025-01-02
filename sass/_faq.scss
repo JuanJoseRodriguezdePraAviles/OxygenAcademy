@@ -1,55 +1,74 @@
 @import 'mixins';
 .faq {
     background-color: white;
+    padding-top: 3rem;
 }
 
-.faqContent {
+.faq-content {
     margin-bottom: 3rem; 
     align-content: center;
     margin-left: 2.5rem;
 }
 
-.faqContent h2, .faqContent p {
+.faq-content h2, .faq-content p {
     text-align: left;
 }
 
-.faqContent h2{
+.faq-content h2{
     font-family: $font-raleway;
     font-size: 2.5rem;
     
 }
 
-.faqContent p {
+.faq-content p {
     font-family: $font-open-sans;
     font-size: 1rem;
 }
 
-.faqRow {
+.faq-row {
     text-align: left;
-    margin-bottom: 0.5rem;;
-}
-
-.faqRow img {
-    display: inline-block;
-    width: 1.6rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
+    height: 2rem;
     
 }
 
-.faqRow p {
+.icon{
+    &--phone {
+        display: inline-block;
+        width: 1.6rem;
+        margin-right: 1rem;
+        margin-left: 0rem;
+        position:relative;
+        top: 0.5rem;
+    }
+    &--mail {
+        display: inline-block;
+        width: 1.4rem;
+        margin-right: 1rem;
+        margin-left: 0rem;
+        position:relative;
+        top:0.3rem;
+    }
+    
+}
+
+
+
+.faq-row p {
+    height: 100%;
     display: inline-block;
     text-align: left;
+    align-items: center;
     font-family: 'Opens Sans';
     color: #A5A5A5;
 }
 
-.faqForm {
+.faq-form {
     display: inline-block;
     text-align: left;
+    width: 100%;
 }
 
-.faqForm label {
+.faq-form label {
     font-family: $font-open-sans;
     color: $blue;
     font-size:0.9rem;
@@ -57,7 +76,7 @@
 
 }
 
-.faqForm input {
+.faq-form input {
     background-color: white;
     border-top: none;
     border-right: none;
@@ -65,30 +84,30 @@
     height: 2rem;
 }
 
-.faqForm label, .faqForm input {
+.faq-form label, .faq-form input {
     display: inline-block;
-    width:80%;
+    width:90%;
     margin: 1rem 0;
 
 }
 
-.consentBox {
+.consent-box {
     text-align: left;
     margin-right: 1rem;
 }
 
-.consentBox input, .consentText {
+.consent-box input, .consent-text {
     display: inline-block;
     vertical-align: top;
 }
 
-.consentBox input {
+.consent-box input {
     width: auto;
     margin-top: 0;
 
 }
 
-.consentText {
+.consent-text {
     font-size: 0.25rem;
     color: #707070;
     width: 23rem;
@@ -104,8 +123,29 @@ input[type=submit] {
     display: inline-block;
     align-self: right;
     margin-top:2rem;
-    margin-left: 7rem;
-    @include blueBtn; 
+    margin-left: 6rem;
+    margin-right: 1rem;
+    @include blue-btn; 
+}
+
+input[type=submit]:hover {
+    background-color: #07688f;
+}
+
+.checkbox {
+    appearance: none;
+    min-width: 1rem;
+    min-height: 2rem;
+    background-clip: content-box;
+    padding: 1rem;  
+    background: url('../images/CheckBoxGray.png');
+    background-repeat: no-repeat;
+}
+.checkbox:checked {
+    min-width: 1rem;
+    background: url('../images/Checkmark.png');
+    background-repeat: no-repeat;
+ 
 }
 
 
@@ -116,14 +156,28 @@ input[type=submit] {
         justify-content: center;
         flex-direction: row;
         padding-top: 5rem;
+        width:100%;
     }
-    .faqContent {
+    .faq-content {
         display:flex;
         justify-content: center;
         flex-direction: column;
         width: 30rem;
     }
+    .faq-content h2 {
+        font-size: 3rem;
+    }
 
+    .phone-row {
+        position:relative;
+        top: -0.25rem;
+    }
+    .phone-icon {
+        margin-left: 1rem;
+    }
+    .faq-row img {
+        margin-right: 0.25rem;
+    }
     .row {
         display:flex;
         justify-content: left;
@@ -131,7 +185,7 @@ input[type=submit] {
         width: 30rem;
     }
 
-    .faqForm {
+    .faq-form {
         display: flex;
         flex-direction: column;
         width:30rem;
@@ -139,7 +193,7 @@ input[type=submit] {
 
     }
 
-    .consentText {
+    .consent-text {
         width: 90%;
     }
 
@@ -147,5 +201,6 @@ input[type=submit] {
         margin-left: auto;
         margin-right: 3rem;
     }
+    
     
 }
