@@ -8,12 +8,12 @@ $font-open-sans: 'Open Sans';
 $big-laptop: url("../images/Background.png");
 $small-laptop: url("../images/BackgroundSmall.png");
 
-@mixin priceBox {
+@mixin price-box {
     margin: 2rem 2rem;
     display: inline-block;
   }
 
-  @mixin blueBtn {
+  @mixin blue-btn {
     background-color: $blue;
     border-radius: 75px;
     color: white;
@@ -22,7 +22,7 @@ $small-laptop: url("../images/BackgroundSmall.png");
 
   }
 
-  @mixin blueCircle {
+  @mixin blue-circle {
     background-color: $blue;
     display: inline-block;
     border-radius: 100%;
