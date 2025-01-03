@@ -67,23 +67,18 @@
     .menu-link {
         display:flex;
         align-items: center;
+        font-family: $font-open-sans;
+        p {
+            font-size: 0.75rem;
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+        }
 
         &--selected {
+            font-family: $font-open-sans;
             display:flex;
             align-items: center;
             border-bottom: 5px solid $blue;
-            font-family: $font-open-sans;
-            .menu-link p {
-                
-                font-size: 0.75rem;
-                padding-right: 0.5rem;
-                padding-left: 0.5rem
-            }
-            
         }
-    }
-
-    .menu-link p{
-        
     }
 }

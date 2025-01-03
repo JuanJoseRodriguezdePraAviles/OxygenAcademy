@@ -57,17 +57,18 @@
   .menu-link {
     display: flex;
     align-items: center;
-  }
-  .menu-link--selected {
-    display: flex;
-    align-items: center;
-    border-bottom: 5px solid #08A6E4;
     font-family: "Open Sans";
   }
-  .menu-link--selected .menu-link p {
+  .menu-link p {
     font-size: 0.75rem;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
+  }
+  .menu-link--selected {
+    font-family: "Open Sans";
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid #08A6E4;
   }
 }
 .main {
