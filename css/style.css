@@ -58,6 +58,7 @@
     display: flex;
     align-items: center;
     font-family: "Open Sans";
+    color: #A5A5A5;
   }
   .menu-link p {
     font-size: 0.75rem;
@@ -533,8 +534,8 @@
   margin: 2rem 2rem 2rem 2rem;
   border-style: solid;
   border-radius: 10%;
-  width: 19rem;
-  height: 15rem;
+  width: 20rem;
+  height: 17rem;
   border-width: 1px;
 }
 
@@ -569,10 +570,10 @@
 
 .price {
   position: relative;
-  top: -3rem;
+  top: -4rem;
 }
 .price--limited {
-  top: -1rem;
+  top: -3rem;
 }
 
 .price-box:hover .btn--green {
@@ -597,7 +598,7 @@
 
 .price-box .btn {
   position: relative;
-  top: 0.5rem;
+  top: 0rem;
 }
 
 .card-column h4 {
@@ -633,7 +634,7 @@
 
 .feature-row {
   width: 100%;
-  margin: 1rem 1rem 1rem 0;
+  margin: 1.5rem 1rem 1rem 0;
   text-align: left;
 }
 
@@ -678,6 +679,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 40rem;
   }
   .price-box {
     width: 25rem;
@@ -689,6 +691,7 @@
     width: 26rem;
     height: 32rem;
     transition: all 1s;
+    margin-bottom: 0;
   }
   .price-box:hover.border--red, .price-box:hover .btn.btn--small.bg--red {
     box-shadow: 5px 5px 20px 0px #f0728f;
@@ -917,6 +920,10 @@ input[type=submit]:hover {
   background-repeat: no-repeat;
 }
 
+input[type=text]:focus {
+  outline: none;
+}
+
 @media screen and (min-width: 1200px) {
   .faq {
     display: flex;
@@ -967,6 +974,7 @@ input[type=submit]:hover {
 .footer {
   box-shadow: 0 0.1px 40px 0px rgb(184, 184, 184);
   padding: 2rem 2rem;
+  background-color: #F7F7F7;
 }
 
 .ownership, .socials {
@@ -1003,12 +1011,17 @@ input[type=submit]:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0;
+    padding: 1.5rem 0;
     position: relative;
     z-index: 10;
   }
+  .ownership h1 {
+    margin-bottom: 1rem;
+  }
   .socials {
     margin-top: 3rem;
+    position: relative;
+    left: 12rem;
   }
 }
 * {
