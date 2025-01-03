@@ -917,6 +917,10 @@ input[type=submit]:hover {
   background-repeat: no-repeat;
 }
 
+input[type=text]:focus {
+  outline: none;
+}
+
 @media screen and (min-width: 1200px) {
   .faq {
     display: flex;

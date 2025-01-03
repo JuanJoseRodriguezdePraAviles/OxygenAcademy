@@ -148,6 +148,10 @@ input[type=submit]:hover {
  
 }
 
+input[type=text]:focus {
+    outline: none;
+}
+
 
 
 @media screen and (min-width: 1200px){
