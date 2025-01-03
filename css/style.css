@@ -58,6 +58,7 @@
     display: flex;
     align-items: center;
     font-family: "Open Sans";
+    color: #A5A5A5;
   }
   .menu-link p {
     font-size: 0.75rem;
@@ -971,6 +972,7 @@ input[type=text]:focus {
 .footer {
   box-shadow: 0 0.1px 40px 0px rgb(184, 184, 184);
   padding: 2rem 2rem;
+  background-color: #F7F7F7;
 }
 
 .ownership, .socials {
