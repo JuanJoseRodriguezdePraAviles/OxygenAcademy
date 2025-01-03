@@ -533,8 +533,8 @@
   margin: 2rem 2rem 2rem 2rem;
   border-style: solid;
   border-radius: 10%;
-  width: 19rem;
-  height: 15rem;
+  width: 20rem;
+  height: 17rem;
   border-width: 1px;
 }
 
@@ -569,10 +569,10 @@
 
 .price {
   position: relative;
-  top: -3rem;
+  top: -4rem;
 }
 .price--limited {
-  top: -1rem;
+  top: -3rem;
 }
 
 .price-box:hover .btn--green {
@@ -597,7 +597,7 @@
 
 .price-box .btn {
   position: relative;
-  top: 0.5rem;
+  top: 0rem;
 }
 
 .card-column h4 {
@@ -633,7 +633,7 @@
 
 .feature-row {
   width: 100%;
-  margin: 1rem 1rem 1rem 0;
+  margin: 1.5rem 1rem 1rem 0;
   text-align: left;
 }
 
