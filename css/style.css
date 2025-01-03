@@ -937,8 +937,8 @@ input[type=submit]:hover {
     position: relative;
     top: -0.25rem;
   }
-  .phone-icon {
-    margin-left: 1rem;
+  .icon--phone {
+    margin-left: 0.5rem;
   }
   .faq-row img {
     margin-right: 0.25rem;
