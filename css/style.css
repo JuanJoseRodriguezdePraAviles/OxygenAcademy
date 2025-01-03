@@ -62,15 +62,9 @@
     display: flex;
     align-items: center;
     border-bottom: 5px solid #08A6E4;
+    font-family: "Open Sans";
   }
   .menu-link--selected .menu-link p {
-    font-family: "Open Sans";
-    font-size: 0.75rem;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-  }
-  .menu-link p {
-    font-family: "Open Sans";
     font-size: 0.75rem;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
