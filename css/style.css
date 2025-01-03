@@ -573,7 +573,7 @@
   top: -4rem;
 }
 .price--limited {
-  top: -1rem;
+  top: -3rem;
 }
 
 .price-box:hover .btn--green {
@@ -775,6 +775,12 @@
     height: 1rem;
     position: relative;
     top: 0.25rem;
+  }
+  .price {
+    position: relative;
+  }
+  .price--limited {
+    top: -1rem;
   }
 }
 .faq {

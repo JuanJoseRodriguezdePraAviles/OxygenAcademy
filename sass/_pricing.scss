@@ -63,7 +63,7 @@
     position: relative;
     top: -4rem;
     &--limited {
-        top: -1rem;
+        top: -3rem;
     }
 }
 
@@ -312,6 +312,13 @@
         position: relative;
         top: 0.25rem;
 
+    }
+
+    .price {
+        position: relative;
+        &--limited {
+            top: -1rem;
+        }
     }
 
     
