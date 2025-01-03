@@ -679,6 +679,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 40rem;
   }
   .price-box {
     width: 25rem;
@@ -690,6 +691,7 @@
     width: 26rem;
     height: 32rem;
     transition: all 1s;
+    margin-bottom: 0;
   }
   .price-box:hover.border--red, .price-box:hover .btn.btn--small.bg--red {
     box-shadow: 5px 5px 20px 0px #f0728f;
