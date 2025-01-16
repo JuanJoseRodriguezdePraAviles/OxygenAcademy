@@ -187,6 +187,26 @@ window.onscroll = () => {
     document.querySelector('div.progress-bar').style.width = scrolled + "%";
 };
 
+//TO THE TOP BUTTON
+
+window.onscroll = () => {
+    const topBtn = document.querySelector('div.to-the-top');
+    console.log('PRUEBA');
+    console.log(document.body.scrollTop);
+    if (document.body.scrollTop> 1) {
+        console.log('if');
+        topBtn.style.display = "block";
+    } else {
+        console.log('else');
+        topBtn.style.display = "none";
+    }
+}
+
+
+topBtn.addEventListener('click', ()=> {
+    
+});
+
  
 
 
