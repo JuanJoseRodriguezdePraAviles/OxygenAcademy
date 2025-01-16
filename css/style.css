@@ -36,6 +36,10 @@
   visibility: hidden;
 }
 
+.header-positioner {
+  position: absolute;
+}
+
 @media screen and (min-width: 1200px) {
   .header {
     display: flex;
@@ -69,7 +73,6 @@
     font-family: "Open Sans";
     display: flex;
     align-items: center;
-    border-bottom: 5px solid #08A6E4;
   }
 }
 .main {
@@ -916,7 +919,7 @@ input[type=submit]:hover {
   min-height: 2rem;
   background-clip: content-box;
   padding: 1rem;
-  background: url("../images/CheckBoxGray.png");
+  background: url("../images/CheckboxGray.png");
   background-repeat: no-repeat;
 }
 
