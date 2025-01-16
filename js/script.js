@@ -179,6 +179,16 @@ menuLinkList[2].addEventListener('mouseout', () => {
 
 });
 
+//SCROLL PROGRESS
+window.onscroll = () => {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.querySelector('div.progress-bar').style.width = scrolled + "%";
+};
+
+ 
+
 
 
 
