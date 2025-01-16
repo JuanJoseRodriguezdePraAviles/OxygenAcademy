@@ -39,6 +39,10 @@
     
 }
 
+.header-positioner {
+    position:absolute;
+}
+
 @media  screen and (min-width: 1200px){
     .header{
         display: flex;
@@ -56,6 +60,7 @@
             justify-content: space-around;
             width: 35rem;
             visibility: visible;
+            
         }
         
     }
