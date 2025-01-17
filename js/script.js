@@ -109,21 +109,21 @@ menuIcon.addEventListener('click', () => {
 
 //LINK NAVIGATION
 menuLinkSelected.addEventListener('click', () => {
-    document.querySelector('div.most-popular').scrollIntoView();
+    document.querySelector('div.most-popular').scrollIntoView({ behavior: 'smooth', block: 'center' });
 
 });
 menuLinkList[0].addEventListener('click', () => {
-    document.querySelector('div.benefits').scrollIntoView();
+    document.querySelector('div.benefits').scrollIntoView({ behavior: 'smooth' });
 
 });
 
 menuLinkList[1].addEventListener('click', () => {
-    document.querySelector('div.cards').scrollIntoView();
+    document.querySelector('div.cards').scrollIntoView({ behavior: 'smooth', block: 'center' });
 
 });
 
 menuLinkList[2].addEventListener('click', () => {
-    document.querySelector('div.faq').scrollIntoView();
+    document.querySelector('div.faq').scrollIntoView({ behavior: 'smooth', block: 'center' });
 
 });
 
@@ -185,26 +185,22 @@ window.onscroll = () => {
     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     var scrolled = (winScroll / height) * 100;
     document.querySelector('div.progress-bar').style.width = scrolled + "%";
-};
 
-//TO THE TOP BUTTON
-
-window.onscroll = () => {
-    const topBtn = document.querySelector('div.to-the-top');
-    console.log('PRUEBA');
-    console.log(document.body.scrollTop);
-    if (document.body.scrollTop> 1) {
-        console.log('if');
+    //TO THE TOP BUTTON
+    
+    
+    if (scrolled> 10) {
         topBtn.style.display = "block";
     } else {
-        console.log('else');
         topBtn.style.display = "none";
     }
-}
+};
+
+const topBtn = document.querySelector('div.to-the-top');
 
 
 topBtn.addEventListener('click', ()=> {
-    
+    document.querySelector('div.header').scrollIntoView({ behavior: 'smooth'});
 });
 
  
