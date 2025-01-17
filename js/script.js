@@ -247,6 +247,25 @@ document.querySelector('input.checkbox').addEventListener('click', ()=> {
     }
 })
 
+//PETICION API FAQ
+const faqForm = document.querySelector('form.faq-form');
+faqForm.addEventListener('submit', async()=>{
+    if(validateFaq()){
+        const response = fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                body: JSON.stringify({
+                  name: document.querySelector('input.input-name').value,
+                  email: document.querySelector('input.input-email').value,
+                }),
+                headers: {
+                  'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+        console.log("response: "+response);
+    }
+});
 
 
 
