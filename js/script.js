@@ -203,6 +203,55 @@ topBtn.addEventListener('click', ()=> {
     document.querySelector('div.header').scrollIntoView({ behavior: 'smooth'});
 });
 
+//VALIDATION FORM
+const btnFaq = document.querySelector('btn-faq');
+function validateFaq() {
+    let valid = true;
+    const name = document.querySelector('input.input-name').value;
+    if(name===String.Empty || name === ""){
+        document.querySelector('input.input-name').style.borderColor = "red";
+        valid = false;
+    }
+    if(name.length<2 && name.length > 100){
+        document.querySelector('input.input-name').style.borderColor = "red";
+        valid = false;
+    }
+    const email = document.querySelector('input.input-email').value;
+    if(email===String.Empty || name === ""){
+        document.querySelector('input.input-email').style.borderColor = "red";
+        valid = false;
+    }
+    const emailRegExpression = new RegExp(
+        '(?:[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*|"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+))'
+      );
+      
+    if(!emailRegExpression.test(email)){
+        document.querySelector('input.input-email').style.borderColor = "red";
+        valid = false;
+    }
+    const checkBox = document.querySelector('input.checkbox');
+    if(!checkBox.checked){
+        document.querySelector('input.checkbox').style.background = "url(../images/checkboxRed.png)";
+        document.querySelector('input.checkbox').style.backgroundRepeat = "no-repeat";
+        
+        valid = false;
+    }
+    return valid;
+
+};
+
+document.querySelector('input.checkbox').addEventListener('click', ()=> {
+    if(document.querySelector('input.checkbox').checked){
+        document.querySelector('input.checkbox').style.background = null;
+        document.querySelector('input.checkbox').style.backgroundRepeat = null;
+    }
+})
+
+
+
+
+
+
  
 
 
