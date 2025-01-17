@@ -200,7 +200,10 @@ const topBtn = document.querySelector('div.to-the-top');
 
 
 topBtn.addEventListener('click', ()=> {
-    document.querySelector('div.header').scrollIntoView({ behavior: 'smooth'});
+    setTimeout(() => {
+
+        document.querySelector('div.header').scrollIntoView({ behavior: 'smooth'})
+    }, 200);
 });
 
 //VALIDATION FORM
@@ -263,17 +266,35 @@ faqForm.addEventListener('submit', async()=>{
             })
             .then((response) => response.json())
             .then((json) => console.log(json));
-        console.log("response: "+response);
     }
 });
 
+//CHANGE CURRENCY
+const select = document.querySelector('select.currency');
+select.addEventListener('change', async()=>{
 
+    const changeRatio = 1;
 
+    const wordQuery = select.value;
+        
+    const endpoint = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json`;
 
+    let listChangeJSON;
+        
+    listChangeJSON = fetch(endpoint, {cache: 'no-cache'}).then(response => {
+        
+        if (response.ok) {
+            listChangeJSON = response.json();
+            return listChangeJSON;
+        
+        } throw new Error('Request failed!');
+        
+    }, networkError => {
+        
+        console.log(networkError.message)
+        
+    });
+    console.log(listChangeJSON);
+});
+    
 
- 
-
-
-
-
-  
