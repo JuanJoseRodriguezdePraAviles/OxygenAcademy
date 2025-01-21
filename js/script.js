@@ -480,18 +480,20 @@ function closePopup(){
 let currentIndex = 0;
 
 function showSlide(index){
-    console.log("ShowingSlide");
     const slides = document.querySelectorAll('.slide');
     const slide = slides[index];
     slide.style.display = 'block';
+
+    document.querySelectorAll('div.dot')[index].style.backgroundColor = "#07688f";
 }
 
 function hideSlide(index){
-    console.log("Hiding slide "+index);
     const slides = document.querySelectorAll('.slide');
     console.log(slides);
     const slide = slides[index];
     slide.style.display = null;
+
+    document.querySelectorAll('div.dot')[index].style.backgroundColor = "#08A6E4";
 }
 
 
@@ -517,6 +519,12 @@ document.querySelector('div.prev').addEventListener('click', ()=>{
     console.log(currentIndex);
     showSlide(currentIndex);
 });
+
+function changeSlide(index){
+    hideSlide(currentIndex);
+    currentIndex = index;
+    showSlide(currentIndex);
+}
 
 
 

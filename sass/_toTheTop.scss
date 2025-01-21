@@ -8,7 +8,16 @@
 
 .arrow-up {
     rotate: -90deg;
-    width: 4rem;
+    width: 2rem;
     position: relative;
     top: 1rem;
+}
+
+@media  screen and (min-width: 1200px){
+    .arrow-up {
+        rotate: -90deg;
+        width: 4rem;
+        position: relative;
+        top: 1rem;
+    }
 }
