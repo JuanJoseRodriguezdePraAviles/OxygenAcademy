@@ -444,13 +444,19 @@ function validateNewsletter() {
 };
 
 document.addEventListener("click", (e) => {
-    if(e.target===document.querySelector("div.newsletterPopup") || e.target===document.querySelector("div.newsletterPopup h2") ||
-        e.target===document.querySelector("div.newsletterPopup input") || e.target===document.querySelector("div.newsletterPopup form")) return;
     if(document.querySelector("div.newsletterPopup")!==null){
-        closePopup();
+        if(e.target===document.querySelector("div.newsletterPopup") || e.target===document.querySelector("div.newsletterPopup h2") ||
+        e.target===document.querySelector("div.newsletterPopup input") || e.target===document.querySelectorAll("div.newsletterPopup input")[1]
+        || e.target===document.querySelector("div.newsletterPopup form")) return;
+        if(document.querySelector("div.newsletterPopup")!==e.target && document.querySelector("div.newsletterPopup h2")!==e.target &&
+            document.querySelector("div.newsletterPopup input")!==e.target && e.target!==document.querySelectorAll("div.newsletterPopup input")[1] 
+            && document.querySelector("div.newsletterPopup form")!==e.target){
+                closePopup();
+        }
     }
     
-})
+    
+});
 
 document.onkeydown = function keyPress (e) {
     console.log("Cerrar con ESC");
