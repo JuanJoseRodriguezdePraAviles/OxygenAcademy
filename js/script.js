@@ -336,6 +336,7 @@ select.addEventListener('change', async()=>{
 sessionStorage.setItem('popupDisplayed', 'false');
 
 //NEWSLETTER POPUP
+/*
 setTimeout(()=> {
     displayPopup();
 }, 5000);
@@ -386,7 +387,6 @@ function displayPopup(){
         newsletterBox.appendChild(exitIcon);
 
         document.querySelector('div.main').appendChild(newsletterBox);
-        console.log('POPUP');
         sessionStorage.setItem('popupDisplayed', 'true');
 
         form.addEventListener('submit', async(e)=>{
@@ -459,7 +459,6 @@ document.addEventListener("click", (e) => {
 });
 
 document.onkeydown = function keyPress (e) {
-    console.log("Cerrar con ESC");
     if(e.key === "Escape") {
         if(document.querySelector("div.newsletterPopup")!==null){
             closePopup();
@@ -475,7 +474,49 @@ function closePopup(){
     document.body.setAttribute("class", "");
     popup.remove();
 
+}*/
+
+//SLIDER
+let currentIndex = 0;
+
+function showSlide(index){
+    console.log("ShowingSlide");
+    const slides = document.querySelectorAll('.slide');
+    const slide = slides[index];
+    slide.style.display = 'block';
 }
+
+function hideSlide(index){
+    console.log("Hiding slide "+index);
+    const slides = document.querySelectorAll('.slide');
+    console.log(slides);
+    const slide = slides[index];
+    slide.style.display = null;
+}
+
+
+showSlide(0);
+
+document.querySelector('div.next').addEventListener('click', ()=>{
+    hideSlide(currentIndex);
+    if(currentIndex>=document.querySelectorAll('.slide').length-1){
+        currentIndex = 0;
+    } else {
+        currentIndex++;
+    }
+    showSlide(currentIndex);
+});
+
+document.querySelector('div.prev').addEventListener('click', ()=>{
+    hideSlide(currentIndex);
+    if(currentIndex<=0){
+        currentIndex = document.querySelectorAll('.slide').length-1;
+    } else {
+        currentIndex--;
+    }
+    console.log(currentIndex);
+    showSlide(currentIndex);
+});
 
 
 

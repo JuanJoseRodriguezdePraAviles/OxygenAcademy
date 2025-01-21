@@ -1,0 +1,46 @@
+@import 'mixins';
+#slider {
+    position: relative;
+    width: 60rem;
+    height: 30rem;
+
+    background-size:100% 100%;
+
+    display: flex;
+}
+
+.slide {
+    display: none;
+}
+
+#slider img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top:0.125rem;
+    
+    max-height:100%; max-width:100%;
+
+}
+
+
+.next, .prev {
+    position:absolute;
+    background-color: $blue;
+    top: 50%;
+    width: 2.5rem;
+    height: 2rem;
+
+}
+
+.next {
+    left: 60rem;
+}
+.prev {
+    rotate: 180deg;
+    left: -2.4rem;
+}
+
+.arrow-right {
+    top: 10rem;
+}
