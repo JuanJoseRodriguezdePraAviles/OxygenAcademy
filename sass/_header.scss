@@ -54,6 +54,22 @@
     width: 0%;
 }
 
+.link-navigation {
+    > div {
+        > p {
+            font-weight: 700;
+            color: #A5A5A5;
+        }
+    }
+    > div:hover {
+        border-bottom: '5px solid #08A6E4';
+        > p {
+            font-weight: 700;
+            color: black;
+        }
+    }
+}
+
 @media  screen and (min-width: 1200px){
     .header{
         display: flex;
@@ -95,6 +111,22 @@
             font-family: $font-open-sans;
             display:flex;
             align-items: center;
+        }
+    }
+
+    .link-navigation {
+        > div {
+            > p {
+                font-weight: 700;
+                color: #A5A5A5;
+            }
+        }
+        > div:hover {
+            border-bottom: 5px solid #08A6E4;
+            > p {
+                font-weight: 700;
+                color: black;
+            }
         }
     }
 }

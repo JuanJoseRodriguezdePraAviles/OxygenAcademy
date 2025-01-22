@@ -52,6 +52,18 @@
   width: 0%;
 }
 
+.link-navigation > div > p {
+  font-weight: 700;
+  color: #A5A5A5;
+}
+.link-navigation > div:hover {
+  border-bottom: "5px solid #08A6E4";
+}
+.link-navigation > div:hover > p {
+  font-weight: 700;
+  color: black;
+}
+
 @media screen and (min-width: 1200px) {
   .header {
     display: flex;
@@ -85,6 +97,17 @@
     font-family: "Open Sans";
     display: flex;
     align-items: center;
+  }
+  .link-navigation > div > p {
+    font-weight: 700;
+    color: #A5A5A5;
+  }
+  .link-navigation > div:hover {
+    border-bottom: 5px solid #08A6E4;
+  }
+  .link-navigation > div:hover > p {
+    font-weight: 700;
+    color: black;
   }
 }
 .main {

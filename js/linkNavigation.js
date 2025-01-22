@@ -22,7 +22,7 @@ menuLinkList[2].addEventListener('click', () => {
 });
 
 //LINK HOVER
-menuLinkSelected.addEventListener('mouseover', () => {
+/*menuLinkSelected.addEventListener('mouseover', () => {
     menuLinkSelected.style.borderBottom = '5px solid #08A6E4';
     menuLinkSelected.childNodes[1].style.fontWeight = 700;
     menuLinkSelected.childNodes[1].style.color =  'black';
@@ -71,4 +71,4 @@ menuLinkList[2].addEventListener('mouseout', () => {
     menuLinkList[2].childNodes[1].style.fontWeight = null;
     menuLinkList[2].childNodes[1].style.color =  '#A5A5A5';
 
-});
+});*/
