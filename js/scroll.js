@@ -6,6 +6,8 @@ let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
 let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 let scrolled = (winScroll / height) * 100;
 window.onscroll = () => {
+    const progressContainer = document.querySelector('div.progress-container');
+    progressContainer.setAttribute('class', 'progress-container');
     winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     scrolled = (winScroll / height) * 100;
@@ -22,6 +24,13 @@ window.onscroll = () => {
     //NEWSLETTER POP UP
     if(scrolled>=25){
         displayPopup();
+    }
+
+    //HIDE SCROLL AT TOP
+    if(winScroll===0){
+        console.log('at the top');
+        
+        progressContainer.setAttribute('class', 'progress-container progress-hidden');
     }
 
 };
