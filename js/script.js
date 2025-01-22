@@ -261,22 +261,36 @@ document.querySelector('input.checkbox').addEventListener('click', ()=> {
 
 //PETICION API FAQ
 const faqForm = document.querySelector('form.faq-form');
-faqForm.addEventListener('submit', ()=>{
+faqForm.addEventListener('submit', async(e)=>{
+    if (e && "preventDefault" in e){
+        e.preventDefault();
+    }
+
     if(validateFaq()){
-        const response = fetch('https://jsonplaceholder.typicode.com/posts', {
+        try {
+            const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
                 method: 'POST',
                 body: JSON.stringify({
                   name: document.querySelector('input.input-name').value,
                   email: document.querySelector('input.input-email').value,
+                  userId: 1
                 }),
                 headers: {
                   'Content-type': 'application/json; charset=UTF-8',
                 },
-            })
-            .then((response) => response.json())
-            .then((json) => console.log(json));
+            });
+            console.log(response.ok);
+            if(response.ok) {
+                alert('Thanks for contacting'); 
+            }
+        }catch(error) {
+            console.log(error);
+        }
+        
     }
 });
+
+
 
 //CHANGE CURRENCY
 const select = document.querySelector('select.currency');
@@ -336,7 +350,7 @@ select.addEventListener('change', async()=>{
 sessionStorage.setItem('popupDisplayed', 'false');
 
 //NEWSLETTER POPUP
-/*
+
 setTimeout(()=> {
     displayPopup();
 }, 5000);
@@ -474,7 +488,7 @@ function closePopup(){
     document.body.setAttribute("class", "");
     popup.remove();
 
-}*/
+}
 
 //SLIDER
 let currentIndex = 0;
@@ -492,9 +506,7 @@ function showSlide(index){
 
 function hideSlide(index){
     const slides = document.querySelectorAll('.slide');
-    console.log(slides);
     const slide = slides[index];
-    console.log(index);
     slide.style.display = null;
 
     document.querySelectorAll('div.dot')[index].style.backgroundColor = "#08A6E4";
@@ -509,7 +521,6 @@ document.querySelector('div.next').addEventListener('click', ()=>{
         currentIndex = 0;
     } else {
         currentIndex++;
-        console.log("index incremented"+currentIndex);
     }
     showSlide(currentIndex);
 });
