@@ -1104,6 +1104,33 @@ input[type=text]:focus {
   width: 2rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .newsletterPopup {
+    padding: 2rem 0;
+    width: 100rem;
+    border-radius: 5%;
+  }
+  .newsletterPopup > h2 {
+    font-size: 3rem;
+  }
+  .newsletterPopup > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .newsletterPopup > form > input[type=text] {
+    width: 30rem;
+    height: 3rem;
+    margin: 2rem 0;
+  }
+  .newsletterPopup > form > input[type=submit] {
+    margin: 2rem 0;
+  }
+  .exit-icon {
+    top: -22.5rem;
+    left: 50rem;
+  }
+}
 .slider-container {
   display: inline-block;
   text-align: center;
