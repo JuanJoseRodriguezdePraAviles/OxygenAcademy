@@ -8,6 +8,9 @@ setTimeout(()=> {
 
 export function displayPopup(){
     if(sessionStorage.getItem('popupDisplayed')==="false") {
+        //DARKER BACKGROUND
+        document.querySelector('div#bg-wrapper').setAttribute("class", "bg--semitransperent");
+
         const newsletterBox = document.createElement('div');
         newsletterBox.setAttribute("class", "newsletterPopup");
         
@@ -51,7 +54,7 @@ export function displayPopup(){
 
         newsletterBox.appendChild(exitIcon);
 
-        document.querySelector('div.main').appendChild(newsletterBox);
+        document.querySelector('body').appendChild(newsletterBox);
         sessionStorage.setItem('popupDisplayed', 'true');
 
         form.addEventListener('submit', async(e)=>{
@@ -135,8 +138,11 @@ document.onkeydown = function keyPress (e) {
 
 
 function closePopup(){
+
     const popup = document.querySelector("div.newsletterPopup");
     document.body.setAttribute("class", "");
     popup.remove();
 
+    document.querySelector('div#bg-wrapper').setAttribute("class", "");
+    
 }

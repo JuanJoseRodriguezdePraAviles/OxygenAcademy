@@ -71,3 +71,9 @@ async function changeSlideAutomatic(index){
 }
 
 changeSlideAutomatic(currentIndex+1);
+
+
+const dots = document.querySelectorAll('div.dot');
+for(let i=0; i< dots.length; i++){
+    dots[i].addEventListener('click', () => changeSlide(i));
+};

@@ -1097,21 +1097,31 @@ input[type=text]:focus {
 }
 .newsletterPopup {
   position: fixed;
-  height: 20rem;
+  height: 15rem;
   width: 20rem;
   top: 10rem;
   left: 5rem;
+  z-index: 1;
   background-color: white;
   border-color: #08A6E4;
   border-width: 0.25rem;
-  border-radius: 5%;
+  border-radius: 5%/10%;
   border-style: solid;
+  padding: 2rem 0;
+  box-shadow: 5px 5px 20px 0px #3bb3df;
 }
 .newsletterPopup > h2 {
   font-family: "Raleway";
+  text-align: center;
+}
+.newsletterPopup > form {
+  margin: 1rem 0;
+}
+.newsletterPopup > form > input[type=text] {
+  margin: 0rem 5rem;
 }
 .newsletterPopup > form > input[type=submit] {
-  margin: 1rem 0;
+  margin: 1rem 0.9rem;
 }
 
 .stop-scrolling {
@@ -1121,8 +1131,8 @@ input[type=text]:focus {
 
 .exit-icon {
   position: relative;
-  top: -12.5rem;
-  left: 9.5rem;
+  top: -16.5rem;
+  left: 17.5rem;
   width: 2rem;
   height: 2rem;
 }
@@ -1131,11 +1141,22 @@ input[type=text]:focus {
   width: 2rem;
 }
 
+.bg--semitransperent {
+  min-height: 10rem;
+  min-width: 10rem;
+  z-index: 0;
+  opacity: 0.2;
+}
+
 @media screen and (min-width: 1200px) {
   .newsletterPopup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2rem 0;
     width: 100rem;
-    border-radius: 5%;
+    height: 20rem;
+    border-radius: 5%/20%;
   }
   .newsletterPopup > h2 {
     font-size: 3rem;
@@ -1148,14 +1169,14 @@ input[type=text]:focus {
   .newsletterPopup > form > input[type=text] {
     width: 30rem;
     height: 3rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
   .newsletterPopup > form > input[type=submit] {
     margin: 2rem 0;
   }
   .exit-icon {
-    top: -22.5rem;
-    left: 50rem;
+    top: -21.5rem;
+    left: 48.5rem;
   }
 }
 .slider-container {

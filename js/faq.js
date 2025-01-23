@@ -3,27 +3,25 @@ const btnFaq = document.querySelector('btn-faq');
 export function validateFaq() {
     let valid = true;
     const name = document.querySelector('input.input-name').value;
-    if(name===String.Empty || name === ""){
+    if(name===String.Empty || name === "" || name.length<2 || name.length > 100){
         document.querySelector('input.input-name').style.borderColor = "red";
         valid = false;
+    } else {
+        document.querySelector('input.input-name').style.borderColor = null;
     }
-    if(name.length<2 && name.length > 100){
-        document.querySelector('input.input-name').style.borderColor = "red";
-        valid = false;
-    }
+    
     const email = document.querySelector('input.input-email').value;
-    if(email===String.Empty || email === ""){
-        document.querySelector('input.input-email').style.borderColor = "red";
-        valid = false;
-    }
     const emailRegExpression = new RegExp(
         '(?:[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*|"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+))'
       );
-      
-    if(!emailRegExpression.test(email)){
+    if(email===String.Empty || email === "" || !emailRegExpression.test(email)){
         document.querySelector('input.input-email').style.borderColor = "red";
         valid = false;
+    } else {
+        document.querySelector('input.input-email').style.borderColor = null;
     }
+    
+     
     const checkBox = document.querySelector('input.checkbox');
     if(!checkBox.checked){
         document.querySelector('input.checkbox').style.background = "url(../images/checkboxRed.png)";
