@@ -7,9 +7,15 @@ function showSlide(index){
         index=0;
     }
     const slide = slides[index];
+
     slide.style.display = 'block';
 
     document.querySelectorAll('div.dot')[index].style.backgroundColor = "#07688f";
+    document.querySelectorAll('div.dot')[index].style.width = "2rem";
+    document.querySelectorAll('div.dot')[index].style.height = "2rem";
+    document.querySelectorAll('div.dot')[index].style.marginBottom = "0rem";
+    document.querySelectorAll('div.dot')[index].style.marginTop = "0rem";
+    
 }
 
 function hideSlide(index){
@@ -18,6 +24,10 @@ function hideSlide(index){
     slide.style.display = null;
 
     document.querySelectorAll('div.dot')[index].style.backgroundColor = "#08A6E4";
+    document.querySelectorAll('div.dot')[index].style.width = "1rem";
+    document.querySelectorAll('div.dot')[index].style.height = "1rem";
+    document.querySelectorAll('div.dot')[index].style.marginBottom = "0.5rem";
+    document.querySelectorAll('div.dot')[index].style.marginTop = "0.5rem";
 }
 
 
@@ -66,7 +76,8 @@ async function changeSlideAutomatic(index){
             }
             await delay(3000); //EXTRA WAIT FOR USER IF USER CHANGE SLIDE MANUALLY
         }
-        if(index>=document.querySelectorAll('.slide').length -1){
+
+        if(index>=document.querySelectorAll('.slide').length){
             changeSlide(0);
             index=0;
         } else {
