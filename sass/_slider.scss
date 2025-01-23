@@ -1,7 +1,7 @@
 @import 'mixins';
 
 .slider-container {
-    display: inline-block;
+    display: relative;
     text-align: center;
     width:100%;
     padding-top: 5rem;
@@ -16,10 +16,13 @@
     background-size:100% 100%;
 
     display: flex;
+    transition: all 1s;
 }
 
 .slide {
     display: none;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 #slider img {
@@ -33,9 +36,10 @@
 
 
 .next, .prev {
+    display: none;
     position:absolute;
     background-color: $blue;
-    top: 30%;
+    top: 26rem;
     width: 2.5rem;
     height: 2rem;
     cursor: pointer;
@@ -49,7 +53,7 @@
 
 
 .next {
-    left: 25rem;
+    left: -100rem;
 }
 .prev {
     rotate: 180deg;
@@ -82,23 +86,25 @@
 @media  screen and (min-width: 1200px){
     .slider-container {
         display: flex;
+
+        //background-color: red;
+        //position:relative;
         align-items: center;
         flex-direction: column;
     }
 
     #slider {
-        position: relative;
+        //position: relative;
         width: 60rem;
         height: 30rem;
 
         background-size:100% 100%;
+        
 
         display: flex;
     }
 
-    .slide {
-        display: none;
-    }
+    
 
     #slider img {
         width: 100%;
@@ -112,22 +118,27 @@
 
 
     .next, .prev {
-        position:absolute;
+        display: block;
+        position:relative;
+        
         background-color: $blue;
-        top: 50%;
-        width: 2.5rem;
+        
+        //width: 2.5rem;
         height: 2rem;
         opacity: 1;
 
     }
 
     .next {
-        left: 60rem;
+        top: -16rem;
+        left: 33rem;
+        
         
     }
     .prev {
+        top: -20rem;
         rotate: 180deg;
-        left: -4.4rem;
+        left: -35rem;
     }
 
     .arrow-right {

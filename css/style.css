@@ -1035,11 +1035,12 @@ input[type=text]:focus {
   }
 }
 .to-the-top {
-  display: none;
+  display: block;
   position: fixed;
   bottom: 20px;
   right: 30px;
   z-index: 99;
+  transition: all 0.5s;
 }
 
 .arrow-up {
@@ -1195,7 +1196,7 @@ input[type=text]:focus {
   }
 }
 .slider-container {
-  display: inline-block;
+  display: relative;
   text-align: center;
   width: 100%;
   padding-top: 5rem;
@@ -1208,10 +1209,13 @@ input[type=text]:focus {
   height: 20rem;
   background-size: 100% 100%;
   display: flex;
+  transition: all 1s;
 }
 
 .slide {
   display: none;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 #slider img {
@@ -1224,9 +1228,10 @@ input[type=text]:focus {
 }
 
 .next, .prev {
+  display: none;
   position: absolute;
   background-color: #08A6E4;
-  top: 30%;
+  top: 26rem;
   width: 2.5rem;
   height: 2rem;
   cursor: pointer;
@@ -1240,7 +1245,7 @@ input[type=text]:focus {
 }
 
 .next {
-  left: 25rem;
+  left: -100rem;
 }
 
 .prev {
@@ -1276,14 +1281,10 @@ input[type=text]:focus {
     flex-direction: column;
   }
   #slider {
-    position: relative;
     width: 60rem;
     height: 30rem;
     background-size: 100% 100%;
     display: flex;
-  }
-  .slide {
-    display: none;
   }
   #slider img {
     width: 100%;
@@ -1294,19 +1295,20 @@ input[type=text]:focus {
     max-width: 100%;
   }
   .next, .prev {
-    position: absolute;
+    display: block;
+    position: relative;
     background-color: #08A6E4;
-    top: 50%;
-    width: 2.5rem;
     height: 2rem;
     opacity: 1;
   }
   .next {
-    left: 60rem;
+    top: -16rem;
+    left: 33rem;
   }
   .prev {
+    top: -20rem;
     rotate: 180deg;
-    left: -4.4rem;
+    left: -35rem;
   }
   .arrow-right {
     top: 10rem;

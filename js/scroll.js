@@ -16,9 +16,9 @@ window.onscroll = () => {
     //TO THE TOP BUTTON
     
     if (scrolled> 90) {
-        topBtn.style.display = "block";
+        topBtn.style.opacity = "1";
     } else {
-        topBtn.style.display = "none";
+        topBtn.style.opacity = "0";
     }
 
     //NEWSLETTER POP UP

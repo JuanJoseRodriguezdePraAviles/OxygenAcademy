@@ -29,9 +29,11 @@ export function displayPopup(){
         const inputSubmit = document.createElement('input');
         inputSubmit.setAttribute("type", "submit");
         inputSubmit.setAttribute("value", "Suscribe");
+        inputSubmit.addEventListener('click', ()=> {
+            validateNewsletter();
+        });
         form.appendChild(inputSubmit);
 
-        form.setAttribute("onsubmit", "return validateNewsletter()");
 
         newsletterBox.appendChild(form);
         
