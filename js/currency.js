@@ -40,6 +40,7 @@ select.addEventListener('change', async()=>{
         
     });
     
+    
     let newBasicPrice = Math.round(originalValueBasic * changeRatio *100)/100;
     let newProfessionalPrice = Math.round(originalValueProfessional * changeRatio*100)/100;
     let newPremiumPrice = Math.round(originalValuePremium * changeRatio*100)/100;
@@ -51,5 +52,8 @@ select.addEventListener('change', async()=>{
     document.querySelector('h3.premium').textContent = unitSymbol + newPremiumPrice;
     
 });
+
+
+
 sessionStorage.setItem('popupDisplayed', 'false');
 
