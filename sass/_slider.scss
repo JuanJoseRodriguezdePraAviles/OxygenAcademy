@@ -11,7 +11,7 @@
 #slider {
     position: relative;
     width: 100%;
-    height: 10rem;
+    height: 20rem;
 
     background-size:100% 100%;
 
@@ -26,9 +26,9 @@
     width: 100%;
     height: auto;
     position: relative;
-    top:0.125rem;
+    top:0.2rem;
     
-    max-height:80%; max-width:50%;
+    max-height:80%; max-width:100%;
 
 }
 
@@ -39,15 +39,22 @@
     top: 30%;
     width: 2.5rem;
     height: 2rem;
-
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 1s;
+}
+.next:hover, .prev:hover {
+    opacity: 1;
+    transition: all 1s;
 }
 
+
 .next {
-    left: 22.5rem;
+    left: 25rem;
 }
 .prev {
     rotate: 180deg;
-    left: 5rem;
+    left: 0.3rem;
 }
 
 .arrow-right {
@@ -94,7 +101,7 @@
         width: 100%;
         height: auto;
         position: relative;
-        top:0.125rem;
+        top:0.01rem;
         
         max-height:100%; max-width:100%;
 
@@ -107,15 +114,17 @@
         top: 50%;
         width: 2.5rem;
         height: 2rem;
+        opacity: 1;
 
     }
 
     .next {
         left: 60rem;
+        
     }
     .prev {
         rotate: 180deg;
-        left: -2.4rem;
+        left: -4.4rem;
     }
 
     .arrow-right {
@@ -136,5 +145,8 @@
         height: 1rem;
         border-radius: 100%;
         
+    }
+    .dot:hover {
+        cursor: pointer;
     }
 }

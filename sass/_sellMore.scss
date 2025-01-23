@@ -23,6 +23,7 @@
 }
 
 .btn {
+    cursor: pointer;
     &--sell-more {
         @include blue-btn; 
         display: inline-block;

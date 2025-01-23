@@ -14,6 +14,7 @@ $small-laptop: url("../images/BackgroundSmall.png");
   }
 
 @mixin blue-btn {
+  cursor: pointer;
   background-color: $blue;
   border-radius: 75px;
   color: white;

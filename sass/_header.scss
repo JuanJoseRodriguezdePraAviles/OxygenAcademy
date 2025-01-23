@@ -104,6 +104,7 @@
         display:flex;
         align-items: center;
         font-family: $font-open-sans;
+        cursor: pointer;
         color: #A5A5A5;
         p {
             font-size: 0.75rem;
@@ -112,6 +113,7 @@
         }
 
         &--selected {
+            cursor: pointer;
             font-family: $font-open-sans;
             display:flex;
             align-items: center;

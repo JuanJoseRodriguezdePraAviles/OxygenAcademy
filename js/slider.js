@@ -40,7 +40,6 @@ document.querySelector('div.prev').addEventListener('click', ()=>{
     } else {
         currentIndex--;
     }
-    console.log(currentIndex);
     showSlide(currentIndex);
 });
 
@@ -58,13 +57,22 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 
 async function changeSlideAutomatic(index){
     while(true){
-        await delay(2000);
-        if(index>=document.querySelectorAll('.slide').length){
+        await delay(3000);
+        if(index!==currentIndex+1){
+            if(index<currentIndex+1){
+                index++;
+            } else if(index>currentIndex+1){
+                index--;
+            }
+            await delay(3000); //EXTRA WAIT FOR USER IF USER CHANGE SLIDE MANUALLY
+        }
+        if(index>=document.querySelectorAll('.slide').length -1){
             changeSlide(0);
+            index=0;
         } else {
             changeSlide(currentIndex+1);
         }
-        
+        index++;
     }
     
     
