@@ -6,13 +6,17 @@ export function validateFaq() {
 
     if(name===String.Empty || name === "" || name.length<2 || name.length > 100){
         const pNode = document.querySelector('p.name-error');
-        console.log("PRUEBA");
-        const errorText = document.createTextNode("You need to introduce a name with a length beteen 2 and 100 characters");
+        if(document.querySelector('p.name-error').firstChild!=null){
+            document.querySelector('p.name-error').firstChild.remove();
+        }
+        
+        const errorText = document.createTextNode("You need to introduce a name with a length between 2 and 100 characters");
         pNode.appendChild(errorText);
 
         document.querySelector('input.input-name').style.borderColor = "red";
         valid = false;
     } else {
+        document.querySelector('p.name-error').firstChild.remove();
         document.querySelector('input.input-name').style.borderColor = null;
     }
     
@@ -22,11 +26,15 @@ export function validateFaq() {
       );
     if(email===String.Empty || email === "" || !emailRegExpression.test(email)){
         const pNode = document.querySelector('p.email-error');
+        if(document.querySelector('p.email-error').firstChild!=null){
+            document.querySelector('p.email-error').firstChild.remove();
+        }
         const errorText = document.createTextNode("You need to introduce a correct email");
         pNode.appendChild(errorText);
         document.querySelector('input.input-email').style.borderColor = "red";
         valid = false;
     } else {
+        document.querySelector('p.email-error').firstChild.remove();
         document.querySelector('input.input-email').style.borderColor = null;
     }
     
