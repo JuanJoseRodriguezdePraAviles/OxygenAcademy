@@ -152,6 +152,9 @@ input[type=text]:focus {
     outline: none;
 }
 
+.name-error, .email-error {
+    color: red;
+}
 
 
 @media screen and (min-width: 1200px){

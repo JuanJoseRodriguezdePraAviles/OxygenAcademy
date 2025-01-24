@@ -987,6 +987,10 @@ input[type=text]:focus {
   outline: none;
 }
 
+.name-error, .email-error {
+  color: red;
+}
+
 @media screen and (min-width: 1200px) {
   .faq {
     display: flex;
@@ -1137,7 +1141,7 @@ input[type=text]:focus {
   margin: 0rem 5rem;
 }
 .newsletterPopup > form > input[type=submit] {
-  margin: 1rem 0.9rem;
+  margin: 0.5rem 0.9rem;
 }
 
 .stop-scrolling {
@@ -1166,6 +1170,13 @@ input[type=text]:focus {
   min-width: 10rem;
   z-index: 0;
   opacity: 0.2;
+}
+
+.error-input {
+  font-family: "Raleway";
+  color: red;
+  margin: 0.5rem 0rem 0 2.5rem;
+  visibility: visible;
 }
 
 @media screen and (min-width: 1200px) {

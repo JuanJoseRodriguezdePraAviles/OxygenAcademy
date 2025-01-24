@@ -26,6 +26,16 @@ export function displayPopup(){
         input.setAttribute("placeholder", "Introduce you email");
 
         form.appendChild(input);
+
+        const errorText = document.createTextNode('You need to introduce an email');
+        const pNode = document.createElement('p');
+        pNode.style.visibility = "hidden";
+        pNode.appendChild(errorText);
+        pNode.setAttribute("class", "error-input");
+
+        
+        form.appendChild(pNode);
+
         const inputSubmit = document.createElement('input');
         inputSubmit.setAttribute("type", "submit");
         inputSubmit.setAttribute("value", "Suscribe");
@@ -81,6 +91,7 @@ export function displayPopup(){
                     });
                     if(response.ok){
                         console.log(response.json());
+                        closePopup();
                         alert('Thank you for suscribing');
                     }
                 } catch(error) {
@@ -96,8 +107,12 @@ export function displayPopup(){
 function validateNewsletter() {
     let valid = true;
     const emailNewsLetter = document.querySelector('input.input-newsletter').value;
+    
     if(emailNewsLetter===String.Empty || emailNewsLetter === ""){
+        console.log("PRUEBA");
         document.querySelector('input.input-newsletter').style.borderColor = "red";
+        document.querySelector('p.error-input').style.textContent = "You need to introduce an email";
+        console.log(document.querySelector('p.error-input').style.textContent);
         valid = false;
     }
     const emailRegExpression = new RegExp(
@@ -105,7 +120,9 @@ function validateNewsletter() {
       );
       
     if(!emailRegExpression.test(emailNewsLetter)){
-        document.querySelector('input.input-email').style.borderColor = "red";
+        console.log("PRUEBA");
+        document.querySelector('input.input-newsletter').style.borderColor = "red";
+        document.querySelector('p.error-input').style.visibility = "visible";
         valid = false;
     }
     
