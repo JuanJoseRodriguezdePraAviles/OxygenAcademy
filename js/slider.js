@@ -39,13 +39,29 @@ class Slider {
         document.querySelectorAll('div.dot')[index].style.marginTop = "0.5rem";
     }
 
+    async changeSlide(index){
+        if(index>=document.querySelectorAll('.slide').length){
+            index=0;
+        }
+        this.hideSlide(currentIndex);
+        currentIndex = index;
+        await delay(500);
+        this.showSlide(currentIndex);
+        
+    }
+
 
 }
 
 //SLIDER
 let currentIndex = 0;
 
-function showSlide(index){
+
+const slider = new Slider('slider');
+
+
+
+/*function showSlide(index){
     const slides = document.querySelectorAll('.slide');
     if(index>=slides.length){
         index=0;
@@ -79,32 +95,32 @@ function hideSlide(index){
     document.querySelectorAll('div.dot')[index].style.height = "1rem";
     document.querySelectorAll('div.dot')[index].style.marginBottom = "0.5rem";
     document.querySelectorAll('div.dot')[index].style.marginTop = "0.5rem";
-}
+}*/
 
 
-showSlide(0);
+slider.showSlide(0);
 
 document.querySelector('div.next').addEventListener('click', ()=>{
-    hideSlide(currentIndex);
+    slider.hideSlide(currentIndex);
     if(currentIndex>=document.querySelectorAll('.slide').length-1){
         currentIndex = 0;
     } else {
         currentIndex++;
     }
-    showSlide(currentIndex);
+    slider.showSlide(currentIndex);
 });
 
 document.querySelector('div.prev').addEventListener('click', ()=>{
-    hideSlide(currentIndex);
+    slider.hideSlide(currentIndex);
     if(currentIndex<=0){
         currentIndex = document.querySelectorAll('.slide').length-1;
     } else {
         currentIndex--;
     }
-    showSlide(currentIndex);
+    slider.showSlide(currentIndex);
 });
 
-async function changeSlide(index){
+/*async function changeSlide(index){
     if(index>=document.querySelectorAll('.slide').length){
         index=0;
     }
@@ -113,7 +129,7 @@ async function changeSlide(index){
     await delay(500);
     showSlide(currentIndex);
     
-}
+}*/
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
@@ -130,10 +146,10 @@ async function changeSlideAutomatic(index){
         }
 
         if(index>=document.querySelectorAll('.slide').length){
-            changeSlide(0);
+            slider.changeSlide(0);
             index=0;
         } else {
-            changeSlide(currentIndex+1);
+            slider.changeSlide(currentIndex+1);
         }
         index++;
     }
@@ -146,5 +162,5 @@ changeSlideAutomatic(currentIndex+1);
 
 const dots = document.querySelectorAll('div.dot');
 for(let i=0; i< dots.length; i++){
-    dots[i].addEventListener('click', () => changeSlide(i));
+    dots[i].addEventListener('click', () => slider.changeSlide(i));
 };
