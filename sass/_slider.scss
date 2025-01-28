@@ -1,0 +1,166 @@
+@import 'mixins';
+
+.slider-container {
+    display: relative;
+    text-align: center;
+    width:100%;
+    padding-top: 5rem;
+    background-color: white;
+}
+
+#slider {
+    position: relative;
+    width: 100%;
+    height: 20rem;
+
+    background-size:100% 100%;
+
+    display: flex;
+    transition: all 1s;
+}
+
+.slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#slider img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top:0.2rem;
+    
+    max-height:80%; max-width:100%;
+}
+
+
+.next, .prev {
+    display: none;
+    position:absolute;
+    background-color: $blue;
+    top: 26rem;
+    width: 2.5rem;
+    height: 2rem;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 1s;
+}
+.next:hover, .prev:hover {
+    opacity: 1;
+    transition: all 1s;
+}
+
+
+.next {
+    left: -100rem;
+}
+.prev {
+    rotate: 180deg;
+    left: 0.3rem;
+}
+
+.arrow-right {
+    top: 10rem;
+}
+
+.dots {
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 0.5rem;
+}
+
+.dot {
+    display: inline-block;
+    background-color: $blue;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    margin: 1rem 0.5rem;
+    transition: all 1s;
+    
+}
+
+
+@media  screen and (min-width: 1200px){
+    .slider-container {
+        display: flex;
+
+        //background-color: red;
+        //position:relative;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #slider {
+        //position: relative;
+        width: 60rem;
+        height: 30rem;
+
+        background-size:100% 100%;
+        
+
+        display: flex;
+    }
+
+    
+
+    #slider img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top:0.01rem;
+        
+        max-height:100%; max-width:100%;
+
+    }
+
+
+    .next, .prev {
+        display: block;
+        position:relative;
+        
+        background-color: $blue;
+        
+        //width: 2.5rem;
+        height: 2rem;
+        opacity: 1;
+
+    }
+
+    .next {
+        top: -16rem;
+        left: 33rem;
+        
+        
+    }
+    .prev {
+        top: -20rem;
+        rotate: 180deg;
+        left: -35rem;
+    }
+
+    .arrow-right {
+        top: 10rem;
+    }
+
+    .dots {
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 50%;
+        height: 10rem;
+    }
+
+    .dot {
+        background-color: $blue;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 100%;
+        
+    }
+    .dot:hover {
+        cursor: pointer;
+    }
+}

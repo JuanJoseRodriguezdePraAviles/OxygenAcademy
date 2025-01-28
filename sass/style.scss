@@ -6,9 +6,12 @@
 @use 'benefits';
 @use 'pricing';
 @use 'faq';
+@use 'toTheTop';
 @use 'footer';
 
 @use 'priceBox';
+@use 'newsletterPopup';
+@use 'slider';
 
 * {
     box-sizing: border-box;

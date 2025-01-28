@@ -1,0 +1,24 @@
+.to-the-top {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    transition: all 0.5s;
+}
+
+.arrow-up {
+    rotate: -90deg;
+    width: 2rem;
+    position: relative;
+    top: 1rem;
+}
+
+@media  screen and (min-width: 1200px){
+    .arrow-up {
+        rotate: -90deg;
+        width: 4rem;
+        position: relative;
+        top: 1rem;
+    }
+}

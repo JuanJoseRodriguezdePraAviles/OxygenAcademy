@@ -169,6 +169,12 @@
     }
 
 }
+.currency {
+    cursor: pointer;
+    > option {
+        cursor: pointer;
+    }
+}
 
 
 @media screen and (min-width: 1200px){
