@@ -3,8 +3,6 @@ const select = document.querySelector('select.currency');
 select.addEventListener('change', async()=>{
 
     let changeRatio = 1;
-
-    const wordQuery = select.value;
         
     const endpoint = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json`;
 

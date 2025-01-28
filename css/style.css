@@ -1139,6 +1139,9 @@ input[type=text]:focus {
 }
 .newsletterPopup > form > input[type=text] {
   margin: 0rem 5rem;
+  border-top: none;
+  border-right: none;
+  border-left: none;
 }
 .newsletterPopup > form > input[type=submit] {
   margin: 0.5rem 0.9rem;
@@ -1208,8 +1211,8 @@ input[type=text]:focus {
     margin: 2rem 0;
   }
   .exit-icon {
-    top: -21.5rem;
-    left: 24rem;
+    top: -23rem;
+    left: 24.3rem;
   }
 }
 .slider-container {
