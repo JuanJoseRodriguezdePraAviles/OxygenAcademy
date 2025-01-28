@@ -61,7 +61,7 @@ export function displayPopup(){
 
         let xIcon= document.createElement('img');
         xIcon.setAttribute("class", "x-icon");
-        xIcon.setAttribute("src", "../images/xIcon.png")
+        xIcon.setAttribute("src", "../images/xIcon.png");
         exitIcon.appendChild(xIcon);
 
         newsletterBox.appendChild(exitIcon);
