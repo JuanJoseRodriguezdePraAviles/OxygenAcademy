@@ -16,7 +16,10 @@ export function validateFaq() {
         document.querySelector('input.input-name').style.borderColor = "red";
         valid = false;
     } else {
-        document.querySelector('p.name-error').firstChild.remove();
+        if(document.querySelector('p.name-error').firstChild!==null){
+            document.querySelector('p.name-error').firstChild.remove();
+        }
+        
         document.querySelector('input.input-name').style.borderColor = null;
     }
     
@@ -34,7 +37,10 @@ export function validateFaq() {
         document.querySelector('input.input-email').style.borderColor = "red";
         valid = false;
     } else {
-        document.querySelector('p.email-error').firstChild.remove();
+        if(document.querySelector('p.email-error').firstChild!==null){
+            document.querySelector('p.email-error').firstChild.remove();
+        }
+        
         document.querySelector('input.input-email').style.borderColor = null;
     }
     
