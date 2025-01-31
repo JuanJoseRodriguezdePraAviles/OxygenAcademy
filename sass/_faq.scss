@@ -76,7 +76,7 @@
 
 }
 
-.faq-form input {
+.faq-form input[type=text] {
     background-color: white;
     border-top: none;
     border-right: none;
@@ -125,6 +125,7 @@ input[type=submit] {
     margin-top:2rem;
     margin-left: 6rem;
     margin-right: 1rem;
+    border:none;
     @include blue-btn; 
 }
 
