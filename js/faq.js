@@ -47,7 +47,7 @@ export function validateFaq() {
      
     const checkBox = document.querySelector('input.checkbox');
     if(!checkBox.checked){
-        document.querySelector('input.checkbox').style.background = "url(../images/checkboxRed.png)";
+        document.querySelector('input.checkbox').style.background = "url(../images/CheckboxRed.png)";
         document.querySelector('input.checkbox').style.backgroundRepeat = "no-repeat";
         
         valid = false;

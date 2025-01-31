@@ -23,7 +23,7 @@ export function displayPopup(){
         const input = document.createElement('input');
         input.setAttribute("type", "text");
         input.setAttribute("class", "input-newsletter");
-        input.setAttribute("placeholder", "Introduce you email");
+        input.setAttribute("placeholder", "Introduce your email");
 
         form.appendChild(input);
 
