@@ -4,7 +4,6 @@ const menuIcon = document.querySelector('img.menu-icon');
 const header = document.querySelector('div.header');
 const headerPositioner = document.querySelector('div.header-positioner');
 const menuLinkContainer = document.querySelector('div.menu--extended');
-const menuLinkSelected = document.querySelector('div.menu-link--selected');
 const menuLinkList = document.querySelectorAll('div.menu-link');
 const main = document.querySelector('div.main');
 
@@ -37,13 +36,6 @@ menuIcon.addEventListener('click', () => {
         //LINKS
         menuLinkContainer.style.transition = '1s all 0.3s';
         menuLinkContainer.style.visibility = 'visible';
-        menuLinkSelected.style.fontFamily = 'Open Sans';
-        menuLinkSelected.style.fontWeight = '700';
-        menuLinkSelected.childNodes[1].style.fontSize = '1rem';
-        menuLinkSelected.childNodes[1].style.paddingRight = '0.5rem';
-        menuLinkSelected.childNodes[1].style.paddingLeft = '0.5rem';
-        menuLinkSelected.childNodes[1].style.letterSpacing = '0.25rem';
-        menuLinkSelected.style.margin = '0.75rem 0';
 
         menuLinkList.forEach(item => {
             item.style.fontFamily = 'Open Sans';
