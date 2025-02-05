@@ -87,13 +87,12 @@
 .faq-form label, .faq-form input {
     display: inline-block;
     width:90%;
-    margin: 1rem 0;
 
 }
 
 .consent-box {
     text-align: left;
-    margin-right: 1rem;
+    margin-right: 0rem;
 }
 
 .consent-box input, .consent-text {
@@ -110,7 +109,7 @@
 .consent-text {
     font-size: 0.25rem;
     color: #707070;
-    width: 23rem;
+    width: 20rem;
     margin-top: 0.3rem;
 }
 
@@ -123,7 +122,6 @@ input[type=submit] {
     display: inline-block;
     align-self: right;
     margin-top:2rem;
-    margin-left: 6rem;
     margin-right: 1rem;
     border:none;
     @include blue-btn; 
@@ -155,6 +153,11 @@ input[type=text]:focus {
 
 .name-error, .email-error {
     color: red;
+}
+
+.btn-faq {
+    margin-right:0;
+    margin-left:3rem;
 }
 
 

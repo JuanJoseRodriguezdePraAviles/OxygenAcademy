@@ -25,7 +25,7 @@
 .menu-icon {
   position: relative;
   top: 0;
-  right: -12rem;
+  right: -7rem;
   padding-top: 1rem;
   margin-bottom: 0;
   width: 1.5rem;
@@ -171,7 +171,7 @@
   background-color: #07688f;
 }
 .btn--big {
-  width: 25rem;
+  width: 20rem;
   height: 5rem;
   box-shadow: 5px 5px 20px 0px #3bb3df;
 }
@@ -196,7 +196,7 @@
   background-image: url("../images/BackgroundSmall.png");
   background-repeat: no-repeat;
   height: 20rem;
-  width: 30rem;
+  width: 100%;
   position: relative;
   left: 0px;
   background-size: 100% 100%;
@@ -335,7 +335,6 @@
 .benefits {
   width: 10rem;
   text-align: center;
-  display: inline-block;
   width: 90%;
 }
 
@@ -925,12 +924,11 @@
 .faq-form label, .faq-form input {
   display: inline-block;
   width: 90%;
-  margin: 1rem 0;
 }
 
 .consent-box {
   text-align: left;
-  margin-right: 1rem;
+  margin-right: 0rem;
 }
 
 .consent-box input, .consent-text {
@@ -946,7 +944,7 @@
 .consent-text {
   font-size: 0.25rem;
   color: #707070;
-  width: 23rem;
+  width: 20rem;
   margin-top: 0.3rem;
 }
 
@@ -959,7 +957,6 @@ input[type=submit] {
   display: inline-block;
   align-self: right;
   margin-top: 2rem;
-  margin-left: 6rem;
   margin-right: 1rem;
   border: none;
   cursor: pointer;
@@ -996,6 +993,11 @@ input[type=text]:focus {
 
 .name-error, .email-error {
   color: red;
+}
+
+.btn-faq {
+  margin-right: 0;
+  margin-left: 3rem;
 }
 
 @media screen and (min-width: 1200px) {
