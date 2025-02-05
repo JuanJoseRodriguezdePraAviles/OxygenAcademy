@@ -83,7 +83,6 @@ faqForm.addEventListener('submit', async(e)=>{
                   'Content-type': 'application/json; charset=UTF-8',
                 },
             });
-            console.log(response.ok);
             if(response.ok) {
                 alert('Thanks for contacting'); 
             }

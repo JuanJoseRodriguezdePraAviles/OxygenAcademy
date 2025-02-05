@@ -90,7 +90,6 @@ export function displayPopup(){
                         },
                     });
                     if(response.ok){
-                        console.log(response.json());
                         closePopup();
                         alert('Thank you for suscribing');
                     }
@@ -109,10 +108,8 @@ function validateNewsletter() {
     const emailNewsLetter = document.querySelector('input.input-newsletter').value;
     
     if(emailNewsLetter===String.Empty || emailNewsLetter === ""){
-        console.log("PRUEBA");
         document.querySelector('input.input-newsletter').style.borderColor = "red";
         document.querySelector('p.error-input').style.textContent = "You need to introduce an email";
-        console.log(document.querySelector('p.error-input').style.textContent);
         valid = false;
     }
     const emailRegExpression = new RegExp(
@@ -120,7 +117,6 @@ function validateNewsletter() {
       );
       
     if(!emailRegExpression.test(emailNewsLetter)){
-        console.log("PRUEBA");
         document.querySelector('input.input-newsletter').style.borderColor = "red";
         document.querySelector('p.error-input').style.visibility = "visible";
         valid = false;

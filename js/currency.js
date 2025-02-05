@@ -24,7 +24,6 @@ select.addEventListener('change', async()=>{
         console.log(networkError.message)
         
     }).then(item => {
-        console.log(select.value);
         if(select.value === 'eur'){
             unitSymbol="€";
             return 1/item.eur.usd;
