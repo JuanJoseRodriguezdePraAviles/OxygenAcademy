@@ -162,6 +162,7 @@
     display: inline-block;
     text-align: center;
     line-height: 3rem;
+    letter-spacing: 3px;
 
     &--professional {
         @include blue-btn;

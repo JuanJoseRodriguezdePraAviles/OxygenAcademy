@@ -25,7 +25,7 @@
 .menu-icon {
   position: relative;
   top: 0;
-  right: -12rem;
+  right: -7rem;
   padding-top: 1rem;
   margin-bottom: 0;
   width: 1.5rem;
@@ -118,6 +118,7 @@
 }
 .main {
   text-align: center;
+  align-content: center;
   margin-top: 5rem;
   background-color: #F7F7F7;
 }
@@ -171,7 +172,7 @@
   background-color: #07688f;
 }
 .btn--big {
-  width: 25rem;
+  width: 20rem;
   height: 5rem;
   box-shadow: 5px 5px 20px 0px #3bb3df;
 }
@@ -196,7 +197,7 @@
   background-image: url("../images/BackgroundSmall.png");
   background-repeat: no-repeat;
   height: 20rem;
-  width: 30rem;
+  width: 100%;
   position: relative;
   left: 0px;
   background-size: 100% 100%;
@@ -333,10 +334,8 @@
   }
 }
 .benefits {
-  width: 10rem;
   text-align: center;
-  display: inline-block;
-  width: 90%;
+  width: 94.4%;
 }
 
 .benefit-box, .benefit-box--extended, .iphone-box {
@@ -459,38 +458,36 @@
 @media screen and (min-width: 1200px) {
   .benefits {
     margin: 10rem 0rem;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
   }
   .benefit-box {
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
-    margin-left: 3rem;
+    margin-left: 0rem;
     margin-right: 0rem;
-    width: 80rem;
+    width: 69rem;
+    padding: 0 15rem 0 0;
   }
   .benefit-box--extended {
-    background-color: #F7F7F7;
     display: flex;
+    background-color: #F7F7F7;
     justify-content: space-between;
     flex-direction: row;
-    margin-left: 3rem;
     margin-right: 3rem;
-    width: 80rem;
   }
   .iphone-box {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    width: 80rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
     background-color: white;
     margin-top: 4rem;
+    width: 69rem;
   }
   .circle--big--blue {
     margin-left: 4rem;
@@ -502,15 +499,20 @@
     margin: 1rem;
   }
   .circle--square {
+    display: inline-block;
+    position: relative;
+    top: 7rem;
     border-radius: 20%;
-    width: 12rem;
-    height: 12rem;
-    margin: 10rem 10rem 10rem 10rem;
+    width: 6rem;
+    height: 6rem;
+    margin: 0rem 0rem 0rem 0rem;
   }
   .circle--big {
-    margin-left: 4rem;
-    width: 24rem;
-    height: 24rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 8rem;
+    width: 16rem;
+    height: 16rem;
   }
   .circle--big--blue {
     background-color: #08A6E4;
@@ -519,21 +521,21 @@
     margin: 1rem;
   }
   .macbook {
-    width: 26rem;
-    left: -160px;
-    top: 110px;
+    width: 18rem;
+    left: -8rem;
+    top: 5rem;
   }
   .iphone {
     position: relative;
-    width: 32rem;
+    width: 24rem;
     left: 0.5rem;
     top: 1.5rem;
   }
   .benefit-text {
     background-color: white;
-    margin: 5rem 5rem 0 0;
-    padding: 4rem;
-    width: 45rem;
+    margin: 5rem 0rem 0 0;
+    padding: 0rem;
+    width: 40rem;
   }
   .benefit-text h3 {
     font-size: 3rem;
@@ -544,6 +546,8 @@
     font-size: 1.5rem;
     font-family: "Open Sans";
     text-align: left;
+    margin-left: 2rem;
+    margin-right: 0;
   }
   .line {
     height: 10px;
@@ -551,6 +555,7 @@
     margin-top: 3rem;
     margin-left: 1rem;
     border-radius: 20%;
+    margin-bottom: 1rem;
   }
   .square {
     margin: 5rem 0rem 0 0;
@@ -705,6 +710,7 @@
   display: inline-block;
   text-align: center;
   line-height: 3rem;
+  letter-spacing: 3px;
 }
 .btn--professional {
   cursor: pointer;
@@ -841,7 +847,9 @@
 }
 .faq {
   background-color: white;
-  padding-top: 3rem;
+  padding-top: 0rem;
+  padding-bottom: 5rem;
+  height: 45rem;
 }
 
 .faq-content {
@@ -857,11 +865,11 @@
 .faq-content h2 {
   font-family: "Raleway";
   font-size: 2.5rem;
+  font-weight: 200;
 }
 
 .faq-content p {
   font-family: "Open Sans";
-  font-size: 1rem;
 }
 
 .faq-row {
@@ -914,17 +922,17 @@
   border-right: none;
   border-left: none;
   height: 2rem;
+  margin-bottom: 1rem;
 }
 
 .faq-form label, .faq-form input {
   display: inline-block;
   width: 90%;
-  margin: 1rem 0;
 }
 
 .consent-box {
   text-align: left;
-  margin-right: 1rem;
+  margin-right: 0rem;
 }
 
 .consent-box input, .consent-text {
@@ -938,9 +946,9 @@
 }
 
 .consent-text {
-  font-size: 0.25rem;
+  font-size: 0.8rem;
   color: #707070;
-  width: 23rem;
+  width: 75%;
   margin-top: 0.3rem;
 }
 
@@ -953,7 +961,6 @@ input[type=submit] {
   display: inline-block;
   align-self: right;
   margin-top: 2rem;
-  margin-left: 6rem;
   margin-right: 1rem;
   border: none;
   cursor: pointer;
@@ -992,22 +999,38 @@ input[type=text]:focus {
   color: red;
 }
 
+.btn-faq {
+  margin-right: 0;
+  margin-left: 3rem;
+}
+
 @media screen and (min-width: 1200px) {
   .faq {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    padding-top: 5rem;
+    padding-top: 0rem;
     width: 100%;
+    height: 25rem;
+  }
+  .faq-column {
+    width: 22.5rem;
   }
   .faq-content {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 30rem;
+    width: 20rem;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .faq-content > p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
   }
   .faq-content h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
   .phone-row {
     position: relative;
@@ -1029,10 +1052,11 @@ input[type=text]:focus {
     display: flex;
     flex-direction: column;
     width: 30rem;
-    margin-left: 3rem;
+    margin-left: 0rem;
   }
   .consent-text {
     width: 90%;
+    font-size: 0.8rem;
   }
   input[type=submit] {
     margin-left: auto;
@@ -1048,6 +1072,7 @@ input[type=text]:focus {
   transition: all 0.5s;
   width: 3rem;
   height: 3rem;
+  opacity: 0;
 }
 
 .to-the-top:hover {
@@ -1077,6 +1102,7 @@ input[type=text]:focus {
   box-shadow: 0 0.1px 40px 0px rgb(184, 184, 184);
   padding: 2rem 2rem;
   background-color: #F7F7F7;
+  height: 8rem;
 }
 
 .ownership, .socials {
@@ -1101,7 +1127,8 @@ input[type=text]:focus {
 
 .socials {
   position: relative;
-  top: -1rem;
+  top: -3rem;
+  left: 16rem;
 }
 
 .socials img {
@@ -1116,6 +1143,7 @@ input[type=text]:focus {
     padding: 1.5rem 0;
     position: relative;
     z-index: 10;
+    margin-top: 4rem;
   }
   .ownership h1 {
     margin-bottom: 1rem;
@@ -1129,9 +1157,10 @@ input[type=text]:focus {
 .newsletterPopup {
   position: fixed;
   height: 15rem;
-  width: 20rem;
-  top: 10rem;
-  left: 5rem;
+  width: 80%;
+  top: 40%;
+  left: 10%;
+  right: 10%;
   z-index: 1;
   background-color: white;
   border-color: #08A6E4;
@@ -1144,9 +1173,13 @@ input[type=text]:focus {
 .newsletterPopup > h2 {
   font-family: "Raleway";
   text-align: center;
+  font-size: 1rem;
 }
 .newsletterPopup > form {
   margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .newsletterPopup > form > input[type=text] {
   margin: 0rem 5rem;
@@ -1165,8 +1198,8 @@ input[type=text]:focus {
 
 .exit-icon {
   position: relative;
-  top: -16.5rem;
-  left: 17.5rem;
+  top: -140%;
+  left: 90%;
   width: 2rem;
   height: 2rem;
 }
@@ -1200,15 +1233,16 @@ input[type=text]:focus {
     flex-direction: column;
     align-items: center;
     padding: 2rem 0;
-    width: 50rem;
-    height: 20rem;
+    width: 50%;
+    left: 30%;
+    height: 15rem;
     border-radius: 5%/20%;
-    margin: 0 27rem;
   }
   .newsletterPopup > h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .newsletterPopup > form {
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1216,14 +1250,14 @@ input[type=text]:focus {
   .newsletterPopup > form > input[type=text] {
     width: 30rem;
     height: 3rem;
-    margin: 1rem 0;
+    margin: 0rem 0;
   }
   .newsletterPopup > form > input[type=submit] {
-    margin: 2rem 0;
+    margin: 0rem 0;
   }
   .exit-icon {
-    top: -23rem;
-    left: 24.3rem;
+    top: -137%;
+    left: 49%;
   }
 }
 .slider-container {
@@ -1248,14 +1282,15 @@ input[type=text]:focus {
   opacity: 0;
   transition: opacity 1s;
   width: 100%;
+  height: auto;
 }
 
 #slider img {
   width: 100%;
-  height: auto;
+  height: 100%;
   position: relative;
   top: 0.2rem;
-  max-height: 80%;
+  max-height: 90%;
   max-width: 100%;
 }
 
@@ -1292,7 +1327,7 @@ input[type=text]:focus {
 .dots {
   display: inline-block;
   width: 10rem;
-  height: 10rem;
+  height: 3rem;
   margin-bottom: 0.5rem;
 }
 
@@ -1311,10 +1346,11 @@ input[type=text]:focus {
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 35rem;
   }
   #slider {
-    width: 60rem;
-    height: 30rem;
+    width: 40rem;
+    height: 20rem;
     background-size: 100% 100%;
     display: flex;
   }
@@ -1332,25 +1368,28 @@ input[type=text]:focus {
     background-color: #08A6E4;
     height: 2rem;
     opacity: 1;
+    overflow: visible;
   }
   .next {
-    top: -16rem;
-    left: 33rem;
+    top: -12rem;
+    left: 25rem;
   }
   .prev {
-    top: -20rem;
+    top: -16rem;
     rotate: 180deg;
-    left: -35rem;
+    left: -25rem;
   }
   .arrow-right {
     top: 10rem;
   }
   .dots {
+    position: relative;
+    top: -7rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 50%;
-    height: 10rem;
+    height: 1rem;
   }
   .dot {
     background-color: #08A6E4;

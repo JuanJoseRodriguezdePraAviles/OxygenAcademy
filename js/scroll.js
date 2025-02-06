@@ -15,7 +15,7 @@ window.onscroll = () => {
 
     //TO THE TOP BUTTON
     
-    if (scrolled> 50) {
+    if (scrolled> 15) {
         topBtn.style.opacity = "1";
     } else {
         topBtn.style.opacity = "0";
@@ -28,7 +28,6 @@ window.onscroll = () => {
 
     //HIDE SCROLL AT TOP
     if(winScroll===0){
-        
         progressContainer.setAttribute('class', 'progress-container progress-hidden');
     }
 

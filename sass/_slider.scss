@@ -24,15 +24,16 @@
     opacity: 0;
     transition: opacity 1s;
     width: 100%;
+    height:auto;
 }
 
 #slider img {
     width: 100%;
-    height: auto;
+    height: 100%;
     position: relative;
     top:0.2rem;
     
-    max-height:80%; max-width:100%;
+    max-height:90%; max-width:100%;
 }
 
 
@@ -68,7 +69,7 @@
 .dots {
     display: inline-block;
     width: 10rem;
-    height: 10rem;
+    height: 3rem;
     margin-bottom: 0.5rem;
 }
 
@@ -92,12 +93,13 @@
         //position:relative;
         align-items: center;
         flex-direction: column;
+        height: 35rem;
     }
 
     #slider {
         //position: relative;
-        width: 60rem;
-        height: 30rem;
+        width: 40rem;
+        height: 20rem;
 
         background-size:100% 100%;
         
@@ -127,31 +129,35 @@
         //width: 2.5rem;
         height: 2rem;
         opacity: 1;
+        overflow: visible;
 
     }
 
     .next {
-        top: -16rem;
-        left: 33rem;
+        top: -12rem;
+        left: 25rem;
         
         
     }
     .prev {
-        top: -20rem;
+        top: -16rem;
         rotate: 180deg;
-        left: -35rem;
+        left: -25rem;
     }
 
     .arrow-right {
         top: 10rem;
     }
+    
 
     .dots {
+        position:relative;
+        top:-7rem;
         display:flex;
         justify-content: space-evenly;
         align-items: center;
         width: 50%;
-        height: 10rem;
+        height: 1rem;
     }
 
     .dot {
