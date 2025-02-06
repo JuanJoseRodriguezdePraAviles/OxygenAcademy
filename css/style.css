@@ -710,6 +710,7 @@
   display: inline-block;
   text-align: center;
   line-height: 3rem;
+  letter-spacing: 3px;
 }
 .btn--professional {
   cursor: pointer;
@@ -846,7 +847,7 @@
 }
 .faq {
   background-color: white;
-  padding-top: 3rem;
+  padding-top: 0rem;
 }
 
 .faq-content {
@@ -1006,7 +1007,7 @@ input[type=text]:focus {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    padding-top: 5rem;
+    padding-top: 0rem;
     width: 100%;
   }
   .faq-content {
@@ -1264,14 +1265,15 @@ input[type=text]:focus {
   opacity: 0;
   transition: opacity 1s;
   width: 100%;
+  height: auto;
 }
 
 #slider img {
   width: 100%;
-  height: auto;
+  height: 100%;
   position: relative;
   top: 0.2rem;
-  max-height: 80%;
+  max-height: 90%;
   max-width: 100%;
 }
 
@@ -1308,7 +1310,7 @@ input[type=text]:focus {
 .dots {
   display: inline-block;
   width: 10rem;
-  height: 10rem;
+  height: 3rem;
   margin-bottom: 0.5rem;
 }
 
@@ -1327,6 +1329,7 @@ input[type=text]:focus {
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 45rem;
   }
   #slider {
     width: 60rem;
@@ -1348,6 +1351,7 @@ input[type=text]:focus {
     background-color: #08A6E4;
     height: 2rem;
     opacity: 1;
+    overflow: visible;
   }
   .next {
     top: -16rem;
@@ -1362,11 +1366,13 @@ input[type=text]:focus {
     top: 10rem;
   }
   .dots {
+    position: relative;
+    top: -7rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 50%;
-    height: 10rem;
+    height: 1rem;
   }
   .dot {
     background-color: #08A6E4;

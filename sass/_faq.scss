@@ -1,7 +1,7 @@
 @import 'mixins';
 .faq {
     background-color: white;
-    padding-top: 3rem;
+    padding-top: 0rem;
 }
 
 .faq-content {
@@ -162,12 +162,13 @@ input[type=text]:focus {
 }
 
 
+
 @media screen and (min-width: 1200px){
     .faq {
         display: flex;
         justify-content: center;
         flex-direction: row;
-        padding-top: 5rem;
+        padding-top: 0rem;
         width:100%;
     }
     .faq-content {
