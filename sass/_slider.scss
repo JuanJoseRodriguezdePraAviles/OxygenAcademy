@@ -93,13 +93,13 @@
         //position:relative;
         align-items: center;
         flex-direction: column;
-        height: 45rem;
+        height: 35rem;
     }
 
     #slider {
         //position: relative;
-        width: 60rem;
-        height: 30rem;
+        width: 40rem;
+        height: 20rem;
 
         background-size:100% 100%;
         
@@ -134,15 +134,15 @@
     }
 
     .next {
-        top: -16rem;
-        left: 33rem;
+        top: -12rem;
+        left: 25rem;
         
         
     }
     .prev {
-        top: -20rem;
+        top: -16rem;
         rotate: 180deg;
-        left: -35rem;
+        left: -25rem;
     }
 
     .arrow-right {

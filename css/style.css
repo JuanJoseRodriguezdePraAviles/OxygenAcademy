@@ -863,11 +863,11 @@
 .faq-content h2 {
   font-family: "Raleway";
   font-size: 2.5rem;
+  font-weight: 200;
 }
 
 .faq-content p {
   font-family: "Open Sans";
-  font-size: 1rem;
 }
 
 .faq-row {
@@ -1010,14 +1010,24 @@ input[type=text]:focus {
     padding-top: 0rem;
     width: 100%;
   }
+  .faq-column {
+    width: 22.5rem;
+  }
   .faq-content {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 30rem;
+    width: 20rem;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .faq-content > p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
   }
   .faq-content h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
   .phone-row {
     position: relative;
@@ -1039,10 +1049,11 @@ input[type=text]:focus {
     display: flex;
     flex-direction: column;
     width: 30rem;
-    margin-left: 3rem;
+    margin-left: 0rem;
   }
   .consent-text {
     width: 90%;
+    font-size: 0.8rem;
   }
   input[type=submit] {
     margin-left: auto;
@@ -1127,6 +1138,7 @@ input[type=text]:focus {
     padding: 1.5rem 0;
     position: relative;
     z-index: 10;
+    margin-top: 4rem;
   }
   .ownership h1 {
     margin-bottom: 1rem;
@@ -1329,11 +1341,11 @@ input[type=text]:focus {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 45rem;
+    height: 35rem;
   }
   #slider {
-    width: 60rem;
-    height: 30rem;
+    width: 40rem;
+    height: 20rem;
     background-size: 100% 100%;
     display: flex;
   }
@@ -1354,13 +1366,13 @@ input[type=text]:focus {
     overflow: visible;
   }
   .next {
-    top: -16rem;
-    left: 33rem;
+    top: -12rem;
+    left: 25rem;
   }
   .prev {
-    top: -20rem;
+    top: -16rem;
     rotate: 180deg;
-    left: -35rem;
+    left: -25rem;
   }
   .arrow-right {
     top: 10rem;

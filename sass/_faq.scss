@@ -17,12 +17,12 @@
 .faq-content h2{
     font-family: $font-raleway;
     font-size: 2.5rem;
+    font-weight: 200;
     
 }
 
 .faq-content p {
     font-family: $font-open-sans;
-    font-size: 1rem;
 }
 
 .faq-row {
@@ -171,15 +171,26 @@ input[type=text]:focus {
         padding-top: 0rem;
         width:100%;
     }
+    .faq-column {
+        width: 22.5rem;
+    }
     .faq-content {
         display:flex;
         justify-content: center;
         flex-direction: column;
-        width: 30rem;
+        width: 20rem;
+        margin-left: 0;
+        margin-bottom: 0;
+        > p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
     }
     .faq-content h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
     }
+
 
     .phone-row {
         position:relative;
@@ -207,12 +218,13 @@ input[type=text]:focus {
         display: flex;
         flex-direction: column;
         width:30rem;
-        margin-left: 3rem;
+        margin-left: 0rem;
 
     }
 
     .consent-text {
         width: 90%;
+        font-size: 0.8rem;
     }
 
     input[type=submit] {
