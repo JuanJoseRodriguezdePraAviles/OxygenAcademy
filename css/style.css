@@ -923,6 +923,7 @@
   border-left: none;
   height: 2rem;
   margin-bottom: 1rem;
+  border-color: #95989A;
 }
 
 .faq-form label, .faq-form input {
@@ -1186,6 +1187,7 @@ input[type=text]:focus {
   border-top: none;
   border-right: none;
   border-left: none;
+  border-color: #95989A;
 }
 .newsletterPopup > form > input[type=submit] {
   margin: 0.5rem 0.9rem;
