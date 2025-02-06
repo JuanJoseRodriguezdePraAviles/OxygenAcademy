@@ -1137,9 +1137,10 @@ input[type=text]:focus {
 .newsletterPopup {
   position: fixed;
   height: 15rem;
-  width: 20rem;
-  top: 10rem;
-  left: 5rem;
+  width: 80%;
+  top: 40%;
+  left: 10%;
+  right: 10%;
   z-index: 1;
   background-color: white;
   border-color: #08A6E4;
@@ -1152,9 +1153,13 @@ input[type=text]:focus {
 .newsletterPopup > h2 {
   font-family: "Raleway";
   text-align: center;
+  font-size: 1rem;
 }
 .newsletterPopup > form {
   margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .newsletterPopup > form > input[type=text] {
   margin: 0rem 5rem;
@@ -1173,8 +1178,8 @@ input[type=text]:focus {
 
 .exit-icon {
   position: relative;
-  top: -16.5rem;
-  left: 17.5rem;
+  top: -140%;
+  left: 90%;
   width: 2rem;
   height: 2rem;
 }
@@ -1208,15 +1213,16 @@ input[type=text]:focus {
     flex-direction: column;
     align-items: center;
     padding: 2rem 0;
-    width: 50rem;
-    height: 20rem;
+    width: 50%;
+    left: 30%;
+    height: 15rem;
     border-radius: 5%/20%;
-    margin: 0 10rem;
   }
   .newsletterPopup > h2 {
     font-size: 3rem;
   }
   .newsletterPopup > form {
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1224,14 +1230,14 @@ input[type=text]:focus {
   .newsletterPopup > form > input[type=text] {
     width: 30rem;
     height: 3rem;
-    margin: 1rem 0;
+    margin: 0rem 0;
   }
   .newsletterPopup > form > input[type=submit] {
-    margin: 2rem 0;
+    margin: 0rem 0;
   }
   .exit-icon {
-    top: -23rem;
-    left: 24.3rem;
+    top: -150%;
+    left: 49%;
   }
 }
 .slider-container {
