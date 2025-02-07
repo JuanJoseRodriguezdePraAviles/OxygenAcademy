@@ -43,10 +43,16 @@ select.addEventListener('change', async()=>{
     let newPremiumPrice = Math.round(originalValuePremium * changeRatio*100)/100;
 
 
-
-    document.querySelector('h3.basic').textContent = unitSymbol + newBasicPrice;
-    document.querySelector('h3.professional').textContent = unitSymbol + newProfessionalPrice;
-    document.querySelector('h3.premium').textContent = unitSymbol + newPremiumPrice;
+    if(unitSymbol==="€"){
+        document.querySelector('h3.basic').textContent = newBasicPrice + unitSymbol;
+        document.querySelector('h3.professional').textContent = newProfessionalPrice + unitSymbol;
+        document.querySelector('h3.premium').textContent = newPremiumPrice + unitSymbol;
+    } else {
+        document.querySelector('h3.basic').textContent = unitSymbol + newBasicPrice;
+        document.querySelector('h3.professional').textContent = unitSymbol + newProfessionalPrice;
+        document.querySelector('h3.premium').textContent = unitSymbol + newPremiumPrice;
+    }
+    
     
 });
 
