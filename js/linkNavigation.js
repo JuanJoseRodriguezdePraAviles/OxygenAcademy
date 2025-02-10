@@ -1,8 +1,17 @@
+import  { isDesktopMode } from "./utilities.js";
+
 const menuLinkList = document.querySelectorAll('div.menu-link');
 
 //LINK NAVIGATION
 menuLinkList[0].addEventListener('click', () => {
-    document.querySelector('div.most-popular').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if(isDesktopMode()){
+        console.log("desktop");
+        document.querySelector('div.most-popular').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+        console.log("mobile");
+        document.querySelector('div.most-popular').scrollIntoView({ behavior: 'smooth'});
+    }
+    
 
 });
 menuLinkList[1].addEventListener('click', () => {

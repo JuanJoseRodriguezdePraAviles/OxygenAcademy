@@ -75,13 +75,6 @@ menuIcon.addEventListener('click', () => {
         //LINKS
         menuLinkContainer.style.transition = null;
         menuLinkContainer.style.visibility = null;
-        menuLinkSelected.style.fontFamily = null;
-        menuLinkSelected.style.fontWeight = null;
-        menuLinkSelected.childNodes[1].style.fontSize = null;
-        menuLinkSelected.childNodes[1].style.paddingRight = null;
-        menuLinkSelected.childNodes[1].style.paddingLeft = null;
-        menuLinkSelected.childNodes[1].style.letterSpacing = null;
-        menuLinkSelected.style.margin = null;
 
         menuLinkList.forEach(item => {
             item.style.fontFamily = null;
