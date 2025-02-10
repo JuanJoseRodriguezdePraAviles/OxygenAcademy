@@ -5,3 +5,4 @@ import './newsletter.js';
 import './faq.js';
 import './currency.js';
 import './slider.js';
+import './utilities.js';
